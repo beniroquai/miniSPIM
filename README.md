@@ -1,4 +1,6 @@
 # miniSPIM
+An attempt to democratize light-sheet microscopy. 
+
 
 This is the repository for the open-source low-cost light-sheet microscope based on a monochromatic cellphone CMOS sensor and commercially available laser-scanning video projector.
 
@@ -25,9 +27,12 @@ Everything on your own risk, no guarantees that it works or that it harms you! I
 ## Setup
 
 ### Optical Setup
+
+The 
 <p align="center">
 <img src="./IMAGES/miniSPIM_opticalsetup.png" width="400">
 </p>
+
 
 ### Remove the lens of the Huawei P9 (at your own risk!!)
 
@@ -72,6 +77,7 @@ In this setup, we had to remove the lens to have bare accessoto the Sony IMX286 
 
 ### Mechanical Setup
 
+The Setup is relatively simple to assemble. A base-plate holds the Projector, the lenses (CCTV as objective and 25mm lens as illumination objective) as well as the mirror. The lid holds everything in place and the smartphone adapter keeps the cellphone in the correct distance from the CCTV lens.
 
 #### Sample mount 
 
@@ -144,6 +150,18 @@ The code is from the Adafruit example with the wiring explained above:
 Make sure you're releasing the Motor after usage, otherwise it can get quiet hot!
 
 
+## Experiments
+
+In order to perform an experiment one need to do the following steps:
+
+* Generate the light-sheet pattern using a computer by displaying a single-pixel line on a full-screen image (e.g. black screen, blue line (RGB=0,0,255))
+* Eventually move the line periodically to find the best position of the light sheet (use the PPT in the presentation folder) 
+* Align the smartphone, so that the round-circle is in the center of the CMOS camera sensor (therefore take a light-source and shine light inside the smaple chamber, i.e. inline with the CCTV lens)
+* Insert the syringe in the sample holder
+* Move the X/Y move so that the sample is in focus by placing a light source perpendicular to the light-sheet or in-line with the detection objective 
+* Let the electric X/Y stage oscillate back and forth to acquire a through-focus series 
+* Acquire a video sequence of the sample
+
 
 ## Parts 
 
@@ -167,13 +185,27 @@ All files can be found in the folder [STL](./STL).
 * 1x ESP32 - ***5€***
 * Set of M3 screws - ***1€***
 * 3x Coverglass, 18x18mm - ***1€***
-* 1x Laser-scanning projector, SONY MHL XXX - ***250€***
+* 1x Laser-scanning projector, SONY MP-CL1A [Link to Sony](https://www.sony.com/electronics/projector/mp-cl1a) - ***250€***
 * Filterset ***1€***
 * Wires, USB-Cable, HDMI-Cable - ***15€***
+* Comar Mirror d=10mm - ***20€***
+* 1x CCTV Lens (f=4mm, f#=1.8) - ***10€***
+* 1x 25mm lens, diameter: 15mm
 
 ## Results
 
-### Lenstissue Focus-Sweep
+### Acquisition using the cellphone 
+
+The Huawei P9 does not allow the acquisition of monochromatic videos by default. Therefore we used the open-source app ***FreeDCam*** available from [github](https://github.com/KillerInk/FreeDcam/tree/cellstorm) or the playstore. In order to reduce the bouncing effect caused by intereference of the scan-speed of the laser (60 Hz), one need to select a frame-rate t_exp < 1/60 s respectively. ISO settings should be selected to get enough signal (usally 1000-2000) for high-quality samples. 
+
+### Use MP4 in Fiji 
+
+Since Fiji does not accept ```.mp4```-files by default, one need to transcode the video into a sequence of images which can be imported through Fiji. This can conveniently be done by using ```ffmpeg``` (freely available from Windows, MAC and Linux!). A standard command to extract the frames into a folder is the following: 
+
+```ffmpeg -i MOV_2019_10_24_07_33_13.mp4 -filter:v "crop=1024:1024:512:512" -vsync 0  MOV_2019_10_24_07_33_13/cropped%06d.png```
+
+
+### Lens-tissue Focus-Sweep
 
 Here a lens-tissue "labelled" with fluorescent marker (Stabilo, Fluorescent Yellow) was swept through the focus. A theater filter blocks the light of the blue exciting laser. 
 
@@ -202,6 +234,8 @@ Better images are coming soon!
 ## License
 Hardware follows the CERN license. Everything else is licensed under CC-BY-NC. 
 
+Everything is free to use - but we would like to ask you for any suggestions and comments. This makes sure, that we can improve this project. 
+
 Everything was developed in the [@Heintzmann-Lab](www.nanoimaging.de) around Rainer Heintzmann at the IPHT Jena. 
 
 ## Contribution
@@ -210,3 +244,4 @@ We need proper samples! If you know how to prepare easy to use cleared fluoresce
 
 In case you have any questions, please fiel an issue or write us an email. We try to improve the setup. 
 
+There is high potential to automate everything - if you have time and want to do that: We hire (but don't have any money - sorry ;-) 
