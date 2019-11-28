@@ -1,0 +1,49 @@
+{
+  "buildFiles": [
+    "/Users/Bene/Dropbox/Dokumente/OpticalDesign/Beamerscope/Android/BeamerscopeIlloptimization/holoscope/src/main/jni/Android.mk",
+    "/Users/Bene/Dropbox/Dokumente/OpticalDesign/Beamerscope/Android/BeamerscopeIlloptimization/holoscope/src/main/jni/Application.mk"
+  ],
+  "cleanCommands": [
+    "/Users/Bene/Library/Android/sdk/ndk-bundle/ndk-build NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003d/Users/Bene/Dropbox/Dokumente/OpticalDesign/Beamerscope/Android/BeamerscopeIlloptimization/holoscope/src/main/jni/Android.mk NDK_APPLICATION_MK\u003d/Users/Bene/Dropbox/Dokumente/OpticalDesign/Beamerscope/Android/BeamerscopeIlloptimization/holoscope/src/main/jni/Application.mk APP_ABI\u003dx86 NDK_ALL_ABIS\u003dx86 NDEBUG\u003d0 APP_PLATFORM\u003dandroid-19 NDK_OUT\u003d/Users/Bene/Dropbox/Dokumente/OpticalDesign/Beamerscope/Android/BeamerscopeIlloptimization/holoscope/.externalNativeBuild/ndkBuild/release/obj NDK_LIBS_OUT\u003d/Users/Bene/Dropbox/Dokumente/OpticalDesign/Beamerscope/Android/BeamerscopeIlloptimization/holoscope/build/intermediates/ndkBuild/release/lib clean"
+  ],
+  "libraries": {
+    "native_microscope-release-x86": {
+      "buildCommand": "/Users/Bene/Library/Android/sdk/ndk-bundle/ndk-build NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003d/Users/Bene/Dropbox/Dokumente/OpticalDesign/Beamerscope/Android/BeamerscopeIlloptimization/holoscope/src/main/jni/Android.mk NDK_APPLICATION_MK\u003d/Users/Bene/Dropbox/Dokumente/OpticalDesign/Beamerscope/Android/BeamerscopeIlloptimization/holoscope/src/main/jni/Application.mk APP_ABI\u003dx86 NDK_ALL_ABIS\u003dx86 NDEBUG\u003d0 APP_PLATFORM\u003dandroid-19 NDK_OUT\u003d/Users/Bene/Dropbox/Dokumente/OpticalDesign/Beamerscope/Android/BeamerscopeIlloptimization/holoscope/.externalNativeBuild/ndkBuild/release/obj NDK_LIBS_OUT\u003d/Users/Bene/Dropbox/Dokumente/OpticalDesign/Beamerscope/Android/BeamerscopeIlloptimization/holoscope/build/intermediates/ndkBuild/release/lib /Users/Bene/Dropbox/Dokumente/OpticalDesign/Beamerscope/Android/BeamerscopeIlloptimization/holoscope/.externalNativeBuild/ndkBuild/release/obj/local/x86/libnative_microscope.so",
+      "toolchain": "toolchain-x86",
+      "abi": "x86",
+      "artifactName": "native_microscope",
+      "files": [
+        {
+          "src": "/Users/Bene/Dropbox/Dokumente/OpticalDesign/Beamerscope/Android/BeamerscopeIlloptimization/holoscope/src/main/jni/common.cpp",
+          "flags": "\"-ffunction-sections\" \"-funwind-tables\" \"-no-canonical-prefixes\" \"-g\" \"-fstack-protector-strong\" \"-fno-exceptions\" \"-fno-rtti\" \"-O2\" \"-DNDEBUG\" \"-I/Users/Bene/Android/opencv3/sdk/native/jni/include/opencv\" \"-I/Users/Bene/Android/opencv3/sdk/native/jni/include\" \"-I/Users/Bene/Android/opencv3/sdk/native/jni/include/\" \"-I/Users/Bene/Dropbox/Dokumente/OpticalDesign/Beamerscope/Android/BeamerscopeIlloptimization/holoscope/src/main/jni\" \"-I/Users/Bene/Library/Android/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include\" \"-I/Users/Bene/Library/Android/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/libs/x86/include\" \"-I/Users/Bene/Library/Android/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/backward\" \"-I/Users/Bene/Dropbox/Dokumente/OpticalDesign/Beamerscope/Android/BeamerscopeIlloptimization/holoscope/src/main/jni\" \"-DANDROID\" \"-fPIC\" \"-DANDROID\" \"-fsigned-char\" \"-Wa,--noexecstack\" \"-Wformat\" \"-Werror\u003dformat-security\" \"-frtti\" \"-fexceptions\" \"-isystem\" \"/Users/Bene/Library/Android/sdk/ndk-bundle/platforms/android-19/arch-x86/usr/include\""
+        },
+        {
+          "src": "/Users/Bene/Dropbox/Dokumente/OpticalDesign/Beamerscope/Android/BeamerscopeIlloptimization/holoscope/src/main/jni/cvComplex.cpp",
+          "flags": "\"-ffunction-sections\" \"-funwind-tables\" \"-no-canonical-prefixes\" \"-g\" \"-fstack-protector-strong\" \"-fno-exceptions\" \"-fno-rtti\" \"-O2\" \"-DNDEBUG\" \"-I/Users/Bene/Android/opencv3/sdk/native/jni/include/opencv\" \"-I/Users/Bene/Android/opencv3/sdk/native/jni/include\" \"-I/Users/Bene/Android/opencv3/sdk/native/jni/include/\" \"-I/Users/Bene/Dropbox/Dokumente/OpticalDesign/Beamerscope/Android/BeamerscopeIlloptimization/holoscope/src/main/jni\" \"-I/Users/Bene/Library/Android/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include\" \"-I/Users/Bene/Library/Android/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/libs/x86/include\" \"-I/Users/Bene/Library/Android/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/backward\" \"-I/Users/Bene/Dropbox/Dokumente/OpticalDesign/Beamerscope/Android/BeamerscopeIlloptimization/holoscope/src/main/jni\" \"-DANDROID\" \"-fPIC\" \"-DANDROID\" \"-fsigned-char\" \"-Wa,--noexecstack\" \"-Wformat\" \"-Werror\u003dformat-security\" \"-frtti\" \"-fexceptions\" \"-isystem\" \"/Users/Bene/Library/Android/sdk/ndk-bundle/platforms/android-19/arch-x86/usr/include\""
+        },
+        {
+          "src": "/Users/Bene/Dropbox/Dokumente/OpticalDesign/Beamerscope/Android/BeamerscopeIlloptimization/holoscope/src/main/jni/jni_illparameter.cpp",
+          "flags": "\"-ffunction-sections\" \"-funwind-tables\" \"-no-canonical-prefixes\" \"-g\" \"-fstack-protector-strong\" \"-fno-exceptions\" \"-fno-rtti\" \"-O2\" \"-DNDEBUG\" \"-I/Users/Bene/Android/opencv3/sdk/native/jni/include/opencv\" \"-I/Users/Bene/Android/opencv3/sdk/native/jni/include\" \"-I/Users/Bene/Android/opencv3/sdk/native/jni/include/\" \"-I/Users/Bene/Dropbox/Dokumente/OpticalDesign/Beamerscope/Android/BeamerscopeIlloptimization/holoscope/src/main/jni\" \"-I/Users/Bene/Library/Android/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include\" \"-I/Users/Bene/Library/Android/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/libs/x86/include\" \"-I/Users/Bene/Library/Android/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/backward\" \"-I/Users/Bene/Dropbox/Dokumente/OpticalDesign/Beamerscope/Android/BeamerscopeIlloptimization/holoscope/src/main/jni\" \"-DANDROID\" \"-fPIC\" \"-DANDROID\" \"-fsigned-char\" \"-Wa,--noexecstack\" \"-Wformat\" \"-Werror\u003dformat-security\" \"-frtti\" \"-fexceptions\" \"-isystem\" \"/Users/Bene/Library/Android/sdk/ndk-bundle/platforms/android-19/arch-x86/usr/include\""
+        },
+        {
+          "src": "/Users/Bene/Dropbox/Dokumente/OpticalDesign/Beamerscope/Android/BeamerscopeIlloptimization/holoscope/src/main/jni/jni_illpattern.cpp",
+          "flags": "\"-ffunction-sections\" \"-funwind-tables\" \"-no-canonical-prefixes\" \"-g\" \"-fstack-protector-strong\" \"-fno-exceptions\" \"-fno-rtti\" \"-O2\" \"-DNDEBUG\" \"-I/Users/Bene/Android/opencv3/sdk/native/jni/include/opencv\" \"-I/Users/Bene/Android/opencv3/sdk/native/jni/include\" \"-I/Users/Bene/Android/opencv3/sdk/native/jni/include/\" \"-I/Users/Bene/Dropbox/Dokumente/OpticalDesign/Beamerscope/Android/BeamerscopeIlloptimization/holoscope/src/main/jni\" \"-I/Users/Bene/Library/Android/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include\" \"-I/Users/Bene/Library/Android/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/libs/x86/include\" \"-I/Users/Bene/Library/Android/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/backward\" \"-I/Users/Bene/Dropbox/Dokumente/OpticalDesign/Beamerscope/Android/BeamerscopeIlloptimization/holoscope/src/main/jni\" \"-DANDROID\" \"-fPIC\" \"-DANDROID\" \"-fsigned-char\" \"-Wa,--noexecstack\" \"-Wformat\" \"-Werror\u003dformat-security\" \"-frtti\" \"-fexceptions\" \"-isystem\" \"/Users/Bene/Library/Android/sdk/ndk-bundle/platforms/android-19/arch-x86/usr/include\""
+        },
+        {
+          "src": "/Users/Bene/Dropbox/Dokumente/OpticalDesign/Beamerscope/Android/BeamerscopeIlloptimization/holoscope/src/main/jni/jni_qDPC.cpp",
+          "flags": "\"-ffunction-sections\" \"-funwind-tables\" \"-no-canonical-prefixes\" \"-g\" \"-fstack-protector-strong\" \"-fno-exceptions\" \"-fno-rtti\" \"-O2\" \"-DNDEBUG\" \"-I/Users/Bene/Android/opencv3/sdk/native/jni/include/opencv\" \"-I/Users/Bene/Android/opencv3/sdk/native/jni/include\" \"-I/Users/Bene/Android/opencv3/sdk/native/jni/include/\" \"-I/Users/Bene/Dropbox/Dokumente/OpticalDesign/Beamerscope/Android/BeamerscopeIlloptimization/holoscope/src/main/jni\" \"-I/Users/Bene/Library/Android/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include\" \"-I/Users/Bene/Library/Android/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/libs/x86/include\" \"-I/Users/Bene/Library/Android/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/backward\" \"-I/Users/Bene/Dropbox/Dokumente/OpticalDesign/Beamerscope/Android/BeamerscopeIlloptimization/holoscope/src/main/jni\" \"-DANDROID\" \"-fPIC\" \"-DANDROID\" \"-fsigned-char\" \"-Wa,--noexecstack\" \"-Wformat\" \"-Werror\u003dformat-security\" \"-frtti\" \"-fexceptions\" \"-isystem\" \"/Users/Bene/Library/Android/sdk/ndk-bundle/platforms/android-19/arch-x86/usr/include\""
+        }
+      ],
+      "output": "/Users/Bene/Dropbox/Dokumente/OpticalDesign/Beamerscope/Android/BeamerscopeIlloptimization/holoscope/.externalNativeBuild/ndkBuild/release/obj/local/x86/libnative_microscope.so"
+    }
+  },
+  "toolchains": {
+    "toolchain-x86": {
+      "cppCompilerExecutable": "/Users/Bene/Library/Android/sdk/ndk-bundle/toolchains/x86-4.9/prebuilt/darwin-x86_64/bin/i686-linux-android-g++"
+    }
+  },
+  "cFileExtensions": [],
+  "cppFileExtensions": [
+    "cpp"
+  ]
+}

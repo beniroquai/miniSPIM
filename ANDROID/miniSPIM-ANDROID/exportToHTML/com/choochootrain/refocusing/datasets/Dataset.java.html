@@ -1,0 +1,56 @@
+<html>
+<head>
+<title>Dataset.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.ln { color: rgb(0,0,0); font-weight: normal; font-style: normal; }
+.s0 { color: rgb(0,0,128); font-weight: bold; }
+.s1 { }
+.s2 { color: rgb(128,128,128); font-style: italic; }
+.s3 { color: rgb(0,128,0); font-weight: bold; }
+.s4 { color: rgb(0,0,255); }
+</style>
+</head>
+<BODY BGCOLOR="#ffffff">
+<TABLE CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#C0C0C0" >
+<TR><TD><CENTER>
+<FONT FACE="Arial, Helvetica" COLOR="#000000">
+Dataset.java</FONT>
+</center></TD></TR></TABLE>
+<pre>
+
+<a name="l1"><span class="ln">1    </span></a><span class="s0">package </span><span class="s1">com.choochootrain.refocusing.datasets; 
+<a name="l2"><span class="ln">2    </span></a> 
+<a name="l3"><span class="ln">3    </span></a></span><span class="s2">// Constants for current image dataset</span><span class="s1"> 
+<a name="l4"><span class="ln">4    </span></a></span><span class="s0">public class </span><span class="s1">Dataset { 
+<a name="l5"><span class="ln">5    </span></a>    </span><span class="s0">public static final </span><span class="s1">String UNITS = </span><span class="s3">&quot;mm&quot;</span><span class="s1">; 
+<a name="l6"><span class="ln">6    </span></a>    </span><span class="s0">public static final int </span><span class="s1">SIZE = </span><span class="s4">7</span><span class="s1">; 
+<a name="l7"><span class="ln">7    </span></a>    </span><span class="s0">public static final int </span><span class="s1">LED_DISTANCE = </span><span class="s4">4</span><span class="s1">; 
+<a name="l8"><span class="ln">8    </span></a>    </span><span class="s0">public static final int </span><span class="s1">F_CONDENSER = </span><span class="s4">60</span><span class="s1">; </span><span class="s2">//mm</span><span class="s1"> 
+<a name="l9"><span class="ln">9    </span></a>    </span><span class="s0">public static final double </span><span class="s1">F1 = </span><span class="s4">16.5</span><span class="s1">; 
+<a name="l10"><span class="ln">10   </span></a>    </span><span class="s0">public static final double </span><span class="s1">F2 = </span><span class="s4">25.4 </span><span class="s1">* </span><span class="s4">4</span><span class="s1">; 
+<a name="l11"><span class="ln">11   </span></a>    </span><span class="s0">public static final double </span><span class="s1">M = F2/F1; 
+<a name="l12"><span class="ln">12   </span></a>    </span><span class="s0">public static final double </span><span class="s1">DX0 = </span><span class="s4">0.0053</span><span class="s1">; 
+<a name="l13"><span class="ln">13   </span></a>    </span><span class="s0">public static final double </span><span class="s1">DX = DX0/M; </span><span class="s2">//spatial resolution</span><span class="s1"> 
+<a name="l14"><span class="ln">14   </span></a> 
+<a name="l15"><span class="ln">15   </span></a>    </span><span class="s0">public static final float </span><span class="s1">MAX_DEPTH = </span><span class="s4">0.1f</span><span class="s1">; 
+<a name="l16"><span class="ln">16   </span></a>    </span><span class="s0">public static final float </span><span class="s1">DEPTH_INC = </span><span class="s4">0.01f</span><span class="s1">; 
+<a name="l17"><span class="ln">17   </span></a> 
+<a name="l18"><span class="ln">18   </span></a>    </span><span class="s0">public static final </span><span class="s1">String DATASET_PATH = </span><span class="s3">&quot;/sdcard/datasets/&quot;</span><span class="s1">; 
+<a name="l19"><span class="ln">19   </span></a>    </span><span class="s0">public static final </span><span class="s1">String DATASET = </span><span class="s3">&quot;10-1-13&quot;</span><span class="s1">; 
+<a name="l20"><span class="ln">20   </span></a> 
+<a name="l21"><span class="ln">21   </span></a>    </span><span class="s0">public static </span><span class="s1">String getRawImagePath(</span><span class="s0">int </span><span class="s1">row, </span><span class="s0">int </span><span class="s1">col) { 
+<a name="l22"><span class="ln">22   </span></a>        </span><span class="s0">return </span><span class="s1">DATASET_PATH + DATASET + </span><span class="s3">&quot;/image&quot; </span><span class="s1">+ String.format(</span><span class="s3">&quot;%d%d&quot;</span><span class="s1">, row, col) + </span><span class="s3">&quot;.bmp&quot;</span><span class="s1">; 
+<a name="l23"><span class="ln">23   </span></a>    } 
+<a name="l24"><span class="ln">24   </span></a> 
+<a name="l25"><span class="ln">25   </span></a>    </span><span class="s0">public static </span><span class="s1">String getResultImagePath(String name, </span><span class="s0">float </span><span class="s1">depth) { 
+<a name="l26"><span class="ln">26   </span></a>        </span><span class="s0">return </span><span class="s1">DATASET_PATH + DATASET + </span><span class="s3">&quot;/&quot; </span><span class="s1">+ name + String.format(</span><span class="s3">&quot;%d&quot;</span><span class="s1">, (</span><span class="s0">int</span><span class="s1">)(depth*</span><span class="s4">100</span><span class="s1">)) + </span><span class="s3">&quot;.png&quot;</span><span class="s1">; 
+<a name="l27"><span class="ln">27   </span></a>    } 
+<a name="l28"><span class="ln">28   </span></a> 
+<a name="l29"><span class="ln">29   </span></a>    </span><span class="s0">public static </span><span class="s1">String getResultImagePath(String name) { 
+<a name="l30"><span class="ln">30   </span></a>        </span><span class="s0">return </span><span class="s1">DATASET_PATH + DATASET + </span><span class="s3">&quot;/&quot; </span><span class="s1">+ name + </span><span class="s3">&quot;.png&quot;</span><span class="s1">; 
+<a name="l31"><span class="ln">31   </span></a>    } 
+<a name="l32"><span class="ln">32   </span></a>} 
+<a name="l33"><span class="ln">33   </span></a></span></pre>
+</body>
+</html>

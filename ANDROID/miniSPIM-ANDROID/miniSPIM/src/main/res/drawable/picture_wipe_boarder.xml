@@ -1,0 +1,16 @@
+<!-- Copyright 2014 Sony Corporation -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <stroke
+        android:width="3px"
+        android:color="#CCCCCC" />
+
+    <padding
+        android:bottom="2px"
+        android:left="2px"
+        android:right="2px"
+        android:top="2px" />
+
+    <corners android:radius="2px" />
+
+</shape>

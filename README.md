@@ -24,6 +24,26 @@ Everything on your own risk, no guarantees that it works or that it harms you! I
 *  Mechanical X/Y-Stage for coarse sample movevement 
 *  Electrical X/Y-Stage for fine through-focus series of the sample 
 
+## ANDROID APP
+**NEW**: Now we support the system with a stand-alone Android App which takes care of the following:
+
+- Image acquisition (monochrome Huawei, RAW, manual texp, ISO-settings)
+- Hardware control of the X/Y-stage for through-focus series (MQTT-based) 
+- Control of the Light-sheet displayed on the Laser-projector
+
+Everything can be found in the folder [ANDROID](.\ANDROID). It has been tested with a HUAWEI P9.
+To display the pattern using a smartphone, one need to connect the laser-projector to the Phone using a HDMI-HML adapter (i.e. USB-c to HDMI), available for 8€ at Ebay. 
+
+The 
+<p align="center">
+<img src="./IMAGES/APP_Android_minispim.png" width="300">
+</p>
+
+The blue stripe is the secondary screen displayed in debug mode. 
+
+
+
+
 ## Setup
 
 ### Optical Setup

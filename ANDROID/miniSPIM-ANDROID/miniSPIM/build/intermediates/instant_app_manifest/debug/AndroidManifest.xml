@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="de.minispim"
+    android:targetSandboxVersion="2" >
+
+    <uses-sdk
+        android:minSdkVersion="21"
+        android:targetSdkVersion="26" />
+
+    <!-- A camera with RAW capability is required to use this application -->
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.raw" />
+
+    <!-- Min/target SDK versions (<uses-sdk>) managed by build.gradle -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- used on huawei p9/10 and for new devices? -->
+    <uses-permission android:name="android.permission.HW_CAMCFG_SERVICE" />
+    <uses-permission android:name="com.huawei.camera.permission.PRIVATE" />
+    <uses-permission android:name="huawei.android.permission.HW_SIGNATURE_OR_SYSTEM" />
+    <!-- used on huawei p9/10 and for new devices? -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- uses-feature android:name="android.hardware.camera" android:required="true"/ -->
+    <!-- uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/ -->
+    <!-- uses-feature android:name="android.hardware.sensor.compass" android:required="false"/ -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <application
+        android:allowBackup="true"
+        android:debuggable="true"
+        android:icon="@drawable/microscope_icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:testOnly="true"
+        android:theme="@android:style/Theme.Holo.Light" >
+        <service android:name="org.eclipse.paho.android.service.MqttService" />
+
+        <activity
+            android:name="de.minispim.activity.SplashActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="de.minispim.activity.MainActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="de.minispim.activity.ZoomableImageActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="de.minispim.acquisition.AcquireResultActivity"
+            android:largeHeap="true"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="de.minispim.acquisition.AcquireActivity"
+            android:largeHeap="true"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!--
+ ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
+        -->
+        <meta-data
+            android:name="android.support.VERSION"
+            android:value="26.1.0" />
+        <meta-data
+            android:name="android.arch.lifecycle.VERSION"
+            android:value="27.0.0-SNAPSHOT" />
+    </application>
+
+</manifest>

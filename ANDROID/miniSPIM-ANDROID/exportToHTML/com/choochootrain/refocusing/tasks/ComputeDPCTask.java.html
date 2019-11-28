@@ -1,0 +1,118 @@
+<html>
+<head>
+<title>ComputeDPCTask.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.ln { color: rgb(0,0,0); font-weight: normal; font-style: normal; }
+.s0 { color: rgb(0,0,128); font-weight: bold; }
+.s1 { }
+.s2 { color: rgb(0,128,0); font-weight: bold; }
+.s3 { color: rgb(0,0,255); }
+.s4 { color: rgb(128,128,128); font-style: italic; }
+</style>
+</head>
+<BODY BGCOLOR="#ffffff">
+<TABLE CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#C0C0C0" >
+<TR><TD><CENTER>
+<FONT FACE="Arial, Helvetica" COLOR="#000000">
+ComputeDPCTask.java</FONT>
+</center></TD></TR></TABLE>
+<pre>
+
+<a name="l1"><span class="ln">1    </span></a><span class="s0">package </span><span class="s1">com.choochootrain.refocusing.tasks; 
+<a name="l2"><span class="ln">2    </span></a> 
+<a name="l3"><span class="ln">3    </span></a></span><span class="s0">import </span><span class="s1">android.content.Context; 
+<a name="l4"><span class="ln">4    </span></a></span><span class="s0">import </span><span class="s1">android.graphics.Bitmap; 
+<a name="l5"><span class="ln">5    </span></a></span><span class="s0">import </span><span class="s1">android.graphics.BitmapFactory; 
+<a name="l6"><span class="ln">6    </span></a> 
+<a name="l7"><span class="ln">7    </span></a></span><span class="s0">import <a href="../../../../com/choochootrain/refocusing/datasets/Dataset.java.html">com.choochootrain.holoscope.datasets.Dataset</a></span><span class="s1">;
+<a name="l8"><span class="ln">8    </span></a></span><span class="s0">import <a href="../../../../com/choochootrain/refocusing/utils/ImageUtils.java.html">com.choochootrain.holoscope.utils.ImageUtils</a></span><span class="s1">;
+<a name="l9"><span class="ln">9    </span></a> 
+<a name="l10"><span class="ln">10   </span></a></span><span class="s0">import </span><span class="s1">org.opencv.core.Core; 
+<a name="l11"><span class="ln">11   </span></a></span><span class="s0">import </span><span class="s1">org.opencv.core.CvType; 
+<a name="l12"><span class="ln">12   </span></a></span><span class="s0">import </span><span class="s1">org.opencv.core.Mat; 
+<a name="l13"><span class="ln">13   </span></a> 
+<a name="l14"><span class="ln">14   </span></a></span><span class="s0">import </span><span class="s1">java.io.File; 
+<a name="l15"><span class="ln">15   </span></a></span><span class="s0">import </span><span class="s1">java.io.FileNotFoundException; 
+<a name="l16"><span class="ln">16   </span></a></span><span class="s0">import </span><span class="s1">java.io.FileOutputStream; 
+<a name="l17"><span class="ln">17   </span></a> 
+<a name="l18"><span class="ln">18   </span></a></span><span class="s0">public class </span><span class="s1">ComputeDPCTask </span><span class="s0">extends <a href="ImageProgressTask.java.html">ImageProgressTask</a> </span><span class="s1">{ 
+<a name="l19"><span class="ln">19   </span></a>    </span><span class="s0">public </span><span class="s1">ComputeDPCTask(Context context) { 
+<a name="l20"><span class="ln">20   </span></a>        </span><span class="s0">super</span><span class="s1">(context); 
+<a name="l21"><span class="ln">21   </span></a>        </span><span class="s0">this</span><span class="s1">.progressDialog.setMessage(</span><span class="s2">&quot;Assembling DPC image...&quot;</span><span class="s1">); 
+<a name="l22"><span class="ln">22   </span></a>    } 
+<a name="l23"><span class="ln">23   </span></a> 
+<a name="l24"><span class="ln">24   </span></a>    @Override 
+<a name="l25"><span class="ln">25   </span></a>    </span><span class="s0">protected </span><span class="s1">Void doInBackground(Float... params) { 
+<a name="l26"><span class="ln">26   </span></a>        </span><span class="s0">float </span><span class="s1">zMin = params[</span><span class="s3">0</span><span class="s1">]; 
+<a name="l27"><span class="ln">27   </span></a>        </span><span class="s0">float </span><span class="s1">zInc = params[</span><span class="s3">1</span><span class="s1">]; 
+<a name="l28"><span class="ln">28   </span></a>        </span><span class="s0">float </span><span class="s1">zMax = params[</span><span class="s3">2</span><span class="s1">]; 
+<a name="l29"><span class="ln">29   </span></a> 
+<a name="l30"><span class="ln">30   </span></a>        </span><span class="s0">for </span><span class="s1">(</span><span class="s0">float </span><span class="s1">z = zMin; z &lt;= zMax; z += zInc) { 
+<a name="l31"><span class="ln">31   </span></a>            </span><span class="s0">float </span><span class="s1">progress = (z - zMin) / (zMax - zMin); 
+<a name="l32"><span class="ln">32   </span></a>            onProgressUpdate((</span><span class="s0">int</span><span class="s1">)(progress * </span><span class="s3">100</span><span class="s1">), -</span><span class="s3">1</span><span class="s1">); 
+<a name="l33"><span class="ln">33   </span></a> 
+<a name="l34"><span class="ln">34   </span></a>            Bitmap result = computeDPC(z); 
+<a name="l35"><span class="ln">35   </span></a>            File resultBmp = </span><span class="s0">new </span><span class="s1">File(<a href="../../../../com/choochootrain/refocusing/datasets/Dataset.java.html">Dataset</a>.getResultImagePath(</span><span class="s2">&quot;dpc&quot;</span><span class="s1">, z)); 
+<a name="l36"><span class="ln">36   </span></a>            </span><span class="s0">try </span><span class="s1">{ 
+<a name="l37"><span class="ln">37   </span></a>                FileOutputStream fos = </span><span class="s0">new </span><span class="s1">FileOutputStream(resultBmp); 
+<a name="l38"><span class="ln">38   </span></a>                result.compress(Bitmap.CompressFormat.PNG, </span><span class="s3">100</span><span class="s1">, fos); 
+<a name="l39"><span class="ln">39   </span></a>            } </span><span class="s0">catch </span><span class="s1">(FileNotFoundException e) { 
+<a name="l40"><span class="ln">40   </span></a>                </span><span class="s0">return null</span><span class="s1">; 
+<a name="l41"><span class="ln">41   </span></a>            } 
+<a name="l42"><span class="ln">42   </span></a>        } 
+<a name="l43"><span class="ln">43   </span></a> 
+<a name="l44"><span class="ln">44   </span></a>        </span><span class="s0">return null</span><span class="s1">; 
+<a name="l45"><span class="ln">45   </span></a>    } 
+<a name="l46"><span class="ln">46   </span></a> 
+<a name="l47"><span class="ln">47   </span></a>    </span><span class="s0">private </span><span class="s1">Bitmap computeDPC(</span><span class="s0">float </span><span class="s1">z) { 
+<a name="l48"><span class="ln">48   </span></a>        Bitmap first = BitmapFactory.decodeFile(<a href="../../../../com/choochootrain/refocusing/datasets/Dataset.java.html">Dataset</a>.getRawImagePath(</span><span class="s3">0</span><span class="s1">, </span><span class="s3">0</span><span class="s1">)); 
+<a name="l49"><span class="ln">49   </span></a>        </span><span class="s0">int </span><span class="s1">width = first.getWidth(); 
+<a name="l50"><span class="ln">50   </span></a>        </span><span class="s0">int </span><span class="s1">height = first.getHeight(); 
+<a name="l51"><span class="ln">51   </span></a> 
+<a name="l52"><span class="ln">52   </span></a>        Mat result = </span><span class="s0">new </span><span class="s1">Mat(height, width, CvType.CV_64FC4); 
+<a name="l53"><span class="ln">53   </span></a>        Mat result8 = </span><span class="s0">new </span><span class="s1">Mat(height, width, CvType.CV_8UC4); 
+<a name="l54"><span class="ln">54   </span></a>        Mat img; 
+<a name="l55"><span class="ln">55   </span></a>        Mat img64 = </span><span class="s0">new </span><span class="s1">Mat(height, width, CvType.CV_64FC4); 
+<a name="l56"><span class="ln">56   </span></a>        Mat shifted; 
+<a name="l57"><span class="ln">57   </span></a>        </span><span class="s0">for </span><span class="s1">(</span><span class="s0">int </span><span class="s1">i = </span><span class="s3">0</span><span class="s1">; i &lt; <a href="../../../../com/choochootrain/refocusing/datasets/Dataset.java.html">Dataset</a>.SIZE; i++) { 
+<a name="l58"><span class="ln">58   </span></a>            </span><span class="s0">int </span><span class="s1">x = i - <a href="../../../../com/choochootrain/refocusing/datasets/Dataset.java.html">Dataset</a>.SIZE / </span><span class="s3">2</span><span class="s1">; 
+<a name="l59"><span class="ln">59   </span></a>            </span><span class="s0">for </span><span class="s1">(</span><span class="s0">int </span><span class="s1">j = </span><span class="s3">0</span><span class="s1">; j &lt; <a href="../../../../com/choochootrain/refocusing/datasets/Dataset.java.html">Dataset</a>.SIZE; j++) { 
+<a name="l60"><span class="ln">60   </span></a>                </span><span class="s0">int </span><span class="s1">y = j - <a href="../../../../com/choochootrain/refocusing/datasets/Dataset.java.html">Dataset</a>.SIZE / </span><span class="s3">2</span><span class="s1">; 
+<a name="l61"><span class="ln">61   </span></a> 
+<a name="l62"><span class="ln">62   </span></a>                </span><span class="s4">//only use bright-field images</span><span class="s1"> 
+<a name="l63"><span class="ln">63   </span></a>                </span><span class="s0">if </span><span class="s1">(Math.sqrt(x*x + y*y) &lt; <a href="../../../../com/choochootrain/refocusing/datasets/Dataset.java.html">Dataset</a>.SIZE / </span><span class="s3">2.0</span><span class="s1">) { 
+<a name="l64"><span class="ln">64   </span></a>                    img = <a href="../../../../com/choochootrain/refocusing/utils/ImageUtils.java.html">ImageUtils</a>.toMat(BitmapFactory.decodeFile(<a href="../../../../com/choochootrain/refocusing/datasets/Dataset.java.html">Dataset</a>.getRawImagePath(i, j))); 
+<a name="l65"><span class="ln">65   </span></a>                    img.convertTo(img64, CvType.CV_64FC4); 
+<a name="l66"><span class="ln">66   </span></a> 
+<a name="l67"><span class="ln">67   </span></a>                    </span><span class="s4">//compute and perform shift</span><span class="s1"> 
+<a name="l68"><span class="ln">68   </span></a> 
+<a name="l69"><span class="ln">69   </span></a>                    </span><span class="s0">int </span><span class="s1">xDistance = x * <a href="../../../../com/choochootrain/refocusing/datasets/Dataset.java.html">Dataset</a>.LED_DISTANCE; 
+<a name="l70"><span class="ln">70   </span></a>                    </span><span class="s0">int </span><span class="s1">yDistance = y * <a href="../../../../com/choochootrain/refocusing/datasets/Dataset.java.html">Dataset</a>.LED_DISTANCE; 
+<a name="l71"><span class="ln">71   </span></a>                    </span><span class="s0">double </span><span class="s1">xShiftDistance = -z * xDistance / <a href="../../../../com/choochootrain/refocusing/datasets/Dataset.java.html">Dataset</a>.F_CONDENSER; 
+<a name="l72"><span class="ln">72   </span></a>                    </span><span class="s0">double </span><span class="s1">yShiftDistance = -z * yDistance / <a href="../../../../com/choochootrain/refocusing/datasets/Dataset.java.html">Dataset</a>.F_CONDENSER; 
+<a name="l73"><span class="ln">73   </span></a>                    </span><span class="s0">int </span><span class="s1">xShift = (</span><span class="s0">int</span><span class="s1">)(-xShiftDistance / <a href="../../../../com/choochootrain/refocusing/datasets/Dataset.java.html">Dataset</a>.DX + </span><span class="s3">0.5</span><span class="s1">); 
+<a name="l74"><span class="ln">74   </span></a>                    </span><span class="s0">int </span><span class="s1">yShift = (</span><span class="s0">int</span><span class="s1">)(-yShiftDistance / <a href="../../../../com/choochootrain/refocusing/datasets/Dataset.java.html">Dataset</a>.DX + </span><span class="s3">0.5</span><span class="s1">); 
+<a name="l75"><span class="ln">75   </span></a> 
+<a name="l76"><span class="ln">76   </span></a>                    shifted = <a href="../../../../com/choochootrain/refocusing/utils/ImageUtils.java.html">ImageUtils</a>.circularShift(img64, xShift, yShift); 
+<a name="l77"><span class="ln">77   </span></a> 
+<a name="l78"><span class="ln">78   </span></a>                    </span><span class="s0">if </span><span class="s1">(x &lt;= </span><span class="s3">0</span><span class="s1">) </span><span class="s4">//add LHS</span><span class="s1"> 
+<a name="l79"><span class="ln">79   </span></a>                        Core.add(result, shifted, result); 
+<a name="l80"><span class="ln">80   </span></a>                    </span><span class="s0">else </span><span class="s4">//subtract RHS</span><span class="s1"> 
+<a name="l81"><span class="ln">81   </span></a>                        Core.subtract(result, shifted, result); 
+<a name="l82"><span class="ln">82   </span></a>                } 
+<a name="l83"><span class="ln">83   </span></a> 
+<a name="l84"><span class="ln">84   </span></a>                </span><span class="s0">float </span><span class="s1">progress = ((</span><span class="s0">float</span><span class="s1">)(i * <a href="../../../../com/choochootrain/refocusing/datasets/Dataset.java.html">Dataset</a>.SIZE + j)) / (<a href="../../../../com/choochootrain/refocusing/datasets/Dataset.java.html">Dataset</a>.SIZE * <a href="../../../../com/choochootrain/refocusing/datasets/Dataset.java.html">Dataset</a>.SIZE); 
+<a name="l85"><span class="ln">85   </span></a>                onProgressUpdate(-</span><span class="s3">1</span><span class="s1">, (</span><span class="s0">int</span><span class="s1">)(progress * </span><span class="s3">100</span><span class="s1">)); 
+<a name="l86"><span class="ln">86   </span></a>            } 
+<a name="l87"><span class="ln">87   </span></a>        } 
+<a name="l88"><span class="ln">88   </span></a> 
+<a name="l89"><span class="ln">89   </span></a>        Core.MinMaxLocResult minMaxLocResult = Core.minMaxLoc(result.reshape(</span><span class="s3">1</span><span class="s1">)); 
+<a name="l90"><span class="ln">90   </span></a>        result.convertTo(result8, CvType.CV_8UC4, </span><span class="s3">255</span><span class="s1">/minMaxLocResult.maxVal); 
+<a name="l91"><span class="ln">91   </span></a> 
+<a name="l92"><span class="ln">92   </span></a>        </span><span class="s0">return <a href="../../../../com/choochootrain/refocusing/utils/ImageUtils.java.html">ImageUtils</a></span><span class="s1">.toBitmap(result8); 
+<a name="l93"><span class="ln">93   </span></a>    } 
+<a name="l94"><span class="ln">94   </span></a>} 
+<a name="l95"><span class="ln">95   </span></a></span></pre>
+</body>
+</html>

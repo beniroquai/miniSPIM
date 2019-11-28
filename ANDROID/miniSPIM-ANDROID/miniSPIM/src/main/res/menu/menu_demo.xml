@@ -1,0 +1,20 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/mirror_fragment"
+        android:showAsAction="never"
+        android:title="Mirror Fragment"/>
+    <item
+        android:id="@+id/mirror_preso"
+        android:showAsAction="never"
+        android:title="Mirror Preso"/>
+    <item
+        android:id="@+id/nested"
+        android:showAsAction="never"
+        android:title="Nested Frement"/>
+    <item
+        android:id="@+id/service"
+        android:showAsAction="never"
+        android:title="Presentation Service"/>
+
+</menu>

@@ -1,0 +1,14 @@
+Executable : /Users/Bene/Library/Android/sdk/ndk-bundle/ndk-build
+arguments : 
+NDK_PROJECT_PATH=null
+APP_BUILD_SCRIPT=/Users/Bene/Dropbox/Dokumente/OpticalDesign/Beamerscope/Android/BeamerscopeIlloptimization/holoscope/src/main/jni/Android.mk
+NDK_APPLICATION_MK=/Users/Bene/Dropbox/Dokumente/OpticalDesign/Beamerscope/Android/BeamerscopeIlloptimization/holoscope/src/main/jni/Application.mk
+APP_ABI=mips
+NDK_ALL_ABIS=mips
+NDEBUG=1
+APP_PLATFORM=android-19
+NDK_OUT=/Users/Bene/Dropbox/Dokumente/OpticalDesign/Beamerscope/Android/BeamerscopeIlloptimization/holoscope/.externalNativeBuild/ndkBuild/debug/obj
+NDK_LIBS_OUT=/Users/Bene/Dropbox/Dokumente/OpticalDesign/Beamerscope/Android/BeamerscopeIlloptimization/holoscope/build/intermediates/ndkBuild/debug/lib
+-n
+jvmArgs : 
+

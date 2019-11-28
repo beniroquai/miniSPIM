@@ -1,0 +1,280 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:2:1-72:12
+MERGED from [com.android.support:support-v13:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/baa46286eba7cc6c8a706f0ddaa15535/support-v13-26.1.0/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:design:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/fa761254aaa8e1689e6752d7e2f87c59/design-26.1.0/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/b28c3dfacec283a46c3ce58afd169202/appcompat-v7-26.1.0/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:transition:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/8322cf9af32f65600c7efa78f6346140/transition-26.1.0/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-v4:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/551bc97023610b3a2a13198864385efa/support-v4-26.1.0/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:cardview-v7:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/807ac336d88c889e208ec7b9f73d5b08/cardview-v7-26.1.0/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/bene/.gradle/caches/transforms-2/files-2.1/88180c2d9df321ed403965b1f5904015/constraint-layout-1.1.3/AndroidManifest.xml:2:1-11:12
+MERGED from [:openCVLibrary300] /Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/openCVLibrary300/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:support-media-compat:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/971a5b69b89846008f16f9726686958d/support-media-compat-26.1.0/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-fragment:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/8a8c7d53542ab2c848ae5b8b6026706d/support-fragment-26.1.0/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-utils:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/c09b57d019897d7ffda25f0a8ed175eb/support-core-utils-26.1.0/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/3dd85d1e994bf65d956ec3b7b4e31d3a/animated-vector-drawable-26.1.0/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:recyclerview-v7:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/0c0dd377aec827ca3874d547d79d8d13/recyclerview-v7-26.1.0/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-core-ui:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/5db4ccce50706864284de1c007bf07c2/support-core-ui-26.1.0/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/ff85a5f3550238ae0cf6c2ade7768dab/support-vector-drawable-26.1.0/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-compat:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/acedb5a439482afea3702661a6a2cc74/support-compat-26.1.0/AndroidManifest.xml:17:1-31:12
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/2651008cd98233e6b4b850667bef3705/runtime-1.0.0/AndroidManifest.xml:17:1-30:12
+	package
+		ADDED from /Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:3:5-26
+	xmlns:android
+		ADDED from /Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:2:11-69
+uses-feature#android.hardware.camera
+ADDED from /Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:6:5-60
+	android:name
+		ADDED from /Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:6:19-57
+uses-feature#android.hardware.camera.raw
+ADDED from /Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:7:5-64
+	android:name
+		ADDED from /Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:7:19-61
+uses-permission#android.permission.CAMERA
+ADDED from /Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:11:5-64
+	android:name
+		ADDED from /Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:11:22-62
+uses-permission#android.permission.RECORD_AUDIO
+ADDED from /Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:12:5-70
+	android:name
+		ADDED from /Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:12:22-68
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:13:5-80
+	android:name
+		ADDED from /Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:13:22-78
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from /Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:14:5-80
+	android:name
+		ADDED from /Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:14:22-77
+uses-permission#android.permission.INTERNET
+ADDED from /Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:15:5-66
+	android:name
+		ADDED from /Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:15:22-64
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from /Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:16:5-76
+	android:name
+		ADDED from /Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:16:22-73
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from /Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:17:5-78
+	android:name
+		ADDED from /Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:17:22-76
+uses-permission#android.permission.CHANGE_WIFI_STATE
+ADDED from /Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:18:5-75
+	android:name
+		ADDED from /Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:18:22-73
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from /Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:19:5-79
+	android:name
+		ADDED from /Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:19:22-76
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from /Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:20:5-81
+	android:name
+		ADDED from /Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:20:22-78
+uses-permission#android.permission.HW_CAMCFG_SERVICE
+ADDED from /Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:22:5-76
+	android:name
+		ADDED from /Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:22:22-73
+uses-permission#com.huawei.camera.permission.PRIVATE
+ADDED from /Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:23:5-76
+	android:name
+		ADDED from /Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:23:22-73
+uses-permission#huawei.android.permission.HW_SIGNATURE_OR_SYSTEM
+ADDED from /Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:24:5-88
+	android:name
+		ADDED from /Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:24:22-85
+uses-permission#android.permission.WAKE_LOCK
+ADDED from /Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:26:5-67
+	android:name
+		ADDED from /Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:26:22-65
+uses-permission#android.permission.READ_PHONE_STATE
+ADDED from /Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:32:5-75
+	android:name
+		ADDED from /Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:32:22-72
+uses-feature#0x00020000
+ADDED from /Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:34:5-78
+	android:glEsVersion
+		ADDED from /Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:34:19-51
+	android:required
+		ADDED from /Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:34:52-75
+application
+ADDED from /Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:36:5-71:19
+MERGED from [com.android.support:support-v13:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/baa46286eba7cc6c8a706f0ddaa15535/support-v13-26.1.0/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-v13:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/baa46286eba7cc6c8a706f0ddaa15535/support-v13-26.1.0/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:design:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/fa761254aaa8e1689e6752d7e2f87c59/design-26.1.0/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:design:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/fa761254aaa8e1689e6752d7e2f87c59/design-26.1.0/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/b28c3dfacec283a46c3ce58afd169202/appcompat-v7-26.1.0/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/b28c3dfacec283a46c3ce58afd169202/appcompat-v7-26.1.0/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:transition:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/8322cf9af32f65600c7efa78f6346140/transition-26.1.0/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:transition:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/8322cf9af32f65600c7efa78f6346140/transition-26.1.0/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-v4:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/551bc97023610b3a2a13198864385efa/support-v4-26.1.0/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-v4:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/551bc97023610b3a2a13198864385efa/support-v4-26.1.0/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:cardview-v7:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/807ac336d88c889e208ec7b9f73d5b08/cardview-v7-26.1.0/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:cardview-v7:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/807ac336d88c889e208ec7b9f73d5b08/cardview-v7-26.1.0/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/bene/.gradle/caches/transforms-2/files-2.1/88180c2d9df321ed403965b1f5904015/constraint-layout-1.1.3/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/bene/.gradle/caches/transforms-2/files-2.1/88180c2d9df321ed403965b1f5904015/constraint-layout-1.1.3/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:support-media-compat:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/971a5b69b89846008f16f9726686958d/support-media-compat-26.1.0/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/971a5b69b89846008f16f9726686958d/support-media-compat-26.1.0/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/8a8c7d53542ab2c848ae5b8b6026706d/support-fragment-26.1.0/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/8a8c7d53542ab2c848ae5b8b6026706d/support-fragment-26.1.0/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/c09b57d019897d7ffda25f0a8ed175eb/support-core-utils-26.1.0/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/c09b57d019897d7ffda25f0a8ed175eb/support-core-utils-26.1.0/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/3dd85d1e994bf65d956ec3b7b4e31d3a/animated-vector-drawable-26.1.0/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/3dd85d1e994bf65d956ec3b7b4e31d3a/animated-vector-drawable-26.1.0/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:recyclerview-v7:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/0c0dd377aec827ca3874d547d79d8d13/recyclerview-v7-26.1.0/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:recyclerview-v7:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/0c0dd377aec827ca3874d547d79d8d13/recyclerview-v7-26.1.0/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-core-ui:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/5db4ccce50706864284de1c007bf07c2/support-core-ui-26.1.0/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-ui:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/5db4ccce50706864284de1c007bf07c2/support-core-ui-26.1.0/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/ff85a5f3550238ae0cf6c2ade7768dab/support-vector-drawable-26.1.0/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/ff85a5f3550238ae0cf6c2ade7768dab/support-vector-drawable-26.1.0/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-compat:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/acedb5a439482afea3702661a6a2cc74/support-compat-26.1.0/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/acedb5a439482afea3702661a6a2cc74/support-compat-26.1.0/AndroidManifest.xml:25:5-29:19
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/2651008cd98233e6b4b850667bef3705/runtime-1.0.0/AndroidManifest.xml:24:5-28:19
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/2651008cd98233e6b4b850667bef3705/runtime-1.0.0/AndroidManifest.xml:24:5-28:19
+	android:supportsRtl
+		ADDED from /Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:41:9-35
+	android:label
+		ADDED from /Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:39:9-41
+	android:icon
+		ADDED from /Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:38:9-49
+	android:allowBackup
+		ADDED from /Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:37:9-35
+	android:theme
+		ADDED from /Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:40:9-56
+service#org.eclipse.paho.android.service.MqttService
+ADDED from /Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:42:9-80
+	android:name
+		ADDED from /Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:42:18-77
+activity#de.minispim.activity.SplashActivity
+ADDED from /Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:43:9-51:20
+	android:screenOrientation
+		ADDED from /Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:46:13-49
+	android:label
+		ADDED from /Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:45:13-45
+	android:name
+		ADDED from /Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:44:13-63
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:47:13-50:29
+action#android.intent.action.MAIN
+ADDED from /Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:48:17-69
+	android:name
+		ADDED from /Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:48:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:49:17-77
+	android:name
+		ADDED from /Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:49:27-74
+activity#de.minispim.activity.MainActivity
+ADDED from /Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:52:9-55:20
+	android:screenOrientation
+		ADDED from /Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:54:13-49
+	android:name
+		ADDED from /Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:53:13-61
+activity#de.minispim.activity.ZoomableImageActivity
+ADDED from /Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:56:9-59:20
+	android:screenOrientation
+		ADDED from /Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:58:13-49
+	android:name
+		ADDED from /Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:57:13-70
+activity#de.minispim.acquisition.AcquireResultActivity
+ADDED from /Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:60:9-64:20
+	android:screenOrientation
+		ADDED from /Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:63:13-49
+	android:largeHeap
+		ADDED from /Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:62:13-37
+	android:name
+		ADDED from /Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:61:13-73
+activity#de.minispim.acquisition.AcquireActivity
+ADDED from /Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:65:9-69:20
+	android:screenOrientation
+		ADDED from /Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:68:13-49
+	android:largeHeap
+		ADDED from /Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:67:13-37
+	android:name
+		ADDED from /Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:66:13-67
+uses-sdk
+INJECTED from /Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml
+INJECTED from /Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml
+MERGED from [com.android.support:support-v13:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/baa46286eba7cc6c8a706f0ddaa15535/support-v13-26.1.0/AndroidManifest.xml:21:5-23:55
+MERGED from [com.android.support:support-v13:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/baa46286eba7cc6c8a706f0ddaa15535/support-v13-26.1.0/AndroidManifest.xml:21:5-23:55
+MERGED from [com.android.support:design:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/fa761254aaa8e1689e6752d7e2f87c59/design-26.1.0/AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:design:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/fa761254aaa8e1689e6752d7e2f87c59/design-26.1.0/AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/b28c3dfacec283a46c3ce58afd169202/appcompat-v7-26.1.0/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/b28c3dfacec283a46c3ce58afd169202/appcompat-v7-26.1.0/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:transition:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/8322cf9af32f65600c7efa78f6346140/transition-26.1.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/8322cf9af32f65600c7efa78f6346140/transition-26.1.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/551bc97023610b3a2a13198864385efa/support-v4-26.1.0/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/551bc97023610b3a2a13198864385efa/support-v4-26.1.0/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:cardview-v7:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/807ac336d88c889e208ec7b9f73d5b08/cardview-v7-26.1.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/807ac336d88c889e208ec7b9f73d5b08/cardview-v7-26.1.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/bene/.gradle/caches/transforms-2/files-2.1/88180c2d9df321ed403965b1f5904015/constraint-layout-1.1.3/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/bene/.gradle/caches/transforms-2/files-2.1/88180c2d9df321ed403965b1f5904015/constraint-layout-1.1.3/AndroidManifest.xml:5:5-7:41
+MERGED from [:openCVLibrary300] /Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/openCVLibrary300/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:openCVLibrary300] /Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/openCVLibrary300/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:support-media-compat:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/971a5b69b89846008f16f9726686958d/support-media-compat-26.1.0/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-media-compat:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/971a5b69b89846008f16f9726686958d/support-media-compat-26.1.0/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-fragment:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/8a8c7d53542ab2c848ae5b8b6026706d/support-fragment-26.1.0/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-fragment:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/8a8c7d53542ab2c848ae5b8b6026706d/support-fragment-26.1.0/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-core-utils:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/c09b57d019897d7ffda25f0a8ed175eb/support-core-utils-26.1.0/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-utils:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/c09b57d019897d7ffda25f0a8ed175eb/support-core-utils-26.1.0/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/3dd85d1e994bf65d956ec3b7b4e31d3a/animated-vector-drawable-26.1.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/3dd85d1e994bf65d956ec3b7b4e31d3a/animated-vector-drawable-26.1.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/0c0dd377aec827ca3874d547d79d8d13/recyclerview-v7-26.1.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/0c0dd377aec827ca3874d547d79d8d13/recyclerview-v7-26.1.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/5db4ccce50706864284de1c007bf07c2/support-core-ui-26.1.0/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/5db4ccce50706864284de1c007bf07c2/support-core-ui-26.1.0/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/ff85a5f3550238ae0cf6c2ade7768dab/support-vector-drawable-26.1.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/ff85a5f3550238ae0cf6c2ade7768dab/support-vector-drawable-26.1.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/acedb5a439482afea3702661a6a2cc74/support-compat-26.1.0/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/acedb5a439482afea3702661a6a2cc74/support-compat-26.1.0/AndroidManifest.xml:21:5-23:58
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/2651008cd98233e6b4b850667bef3705/runtime-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/2651008cd98233e6b4b850667bef3705/runtime-1.0.0/AndroidManifest.xml:20:5-22:41
+INJECTED from /Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml
+INJECTED from /Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml
+	tools:overrideLibrary
+		ADDED from [com.android.support:support-v13:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/baa46286eba7cc6c8a706f0ddaa15535/support-v13-26.1.0/AndroidManifest.xml:23:9-52
+	android:targetSdkVersion
+		INJECTED from /Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml
+		ADDED from /Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml
+		INJECTED from /Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml
+		ADDED from /Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml
+		INJECTED from /Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml
+meta-data#android.support.VERSION
+ADDED from [com.android.support:support-v13:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/baa46286eba7cc6c8a706f0ddaa15535/support-v13-26.1.0/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:design:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/fa761254aaa8e1689e6752d7e2f87c59/design-26.1.0/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:design:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/fa761254aaa8e1689e6752d7e2f87c59/design-26.1.0/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/b28c3dfacec283a46c3ce58afd169202/appcompat-v7-26.1.0/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/b28c3dfacec283a46c3ce58afd169202/appcompat-v7-26.1.0/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:transition:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/8322cf9af32f65600c7efa78f6346140/transition-26.1.0/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:transition:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/8322cf9af32f65600c7efa78f6346140/transition-26.1.0/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-v4:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/551bc97023610b3a2a13198864385efa/support-v4-26.1.0/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-v4:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/551bc97023610b3a2a13198864385efa/support-v4-26.1.0/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:cardview-v7:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/807ac336d88c889e208ec7b9f73d5b08/cardview-v7-26.1.0/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:cardview-v7:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/807ac336d88c889e208ec7b9f73d5b08/cardview-v7-26.1.0/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-media-compat:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/971a5b69b89846008f16f9726686958d/support-media-compat-26.1.0/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/971a5b69b89846008f16f9726686958d/support-media-compat-26.1.0/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/8a8c7d53542ab2c848ae5b8b6026706d/support-fragment-26.1.0/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/8a8c7d53542ab2c848ae5b8b6026706d/support-fragment-26.1.0/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/c09b57d019897d7ffda25f0a8ed175eb/support-core-utils-26.1.0/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/c09b57d019897d7ffda25f0a8ed175eb/support-core-utils-26.1.0/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/3dd85d1e994bf65d956ec3b7b4e31d3a/animated-vector-drawable-26.1.0/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/3dd85d1e994bf65d956ec3b7b4e31d3a/animated-vector-drawable-26.1.0/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:recyclerview-v7:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/0c0dd377aec827ca3874d547d79d8d13/recyclerview-v7-26.1.0/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:recyclerview-v7:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/0c0dd377aec827ca3874d547d79d8d13/recyclerview-v7-26.1.0/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-core-ui:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/5db4ccce50706864284de1c007bf07c2/support-core-ui-26.1.0/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-ui:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/5db4ccce50706864284de1c007bf07c2/support-core-ui-26.1.0/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/ff85a5f3550238ae0cf6c2ade7768dab/support-vector-drawable-26.1.0/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/ff85a5f3550238ae0cf6c2ade7768dab/support-vector-drawable-26.1.0/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-compat:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/acedb5a439482afea3702661a6a2cc74/support-compat-26.1.0/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/acedb5a439482afea3702661a6a2cc74/support-compat-26.1.0/AndroidManifest.xml:26:9-28:38
+	android:value
+		ADDED from [com.android.support:support-v13:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/baa46286eba7cc6c8a706f0ddaa15535/support-v13-26.1.0/AndroidManifest.xml:28:13-35
+	android:name
+		ADDED from [com.android.support:support-v13:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/baa46286eba7cc6c8a706f0ddaa15535/support-v13-26.1.0/AndroidManifest.xml:27:13-51
+meta-data#android.arch.lifecycle.VERSION
+ADDED from [android.arch.lifecycle:runtime:1.0.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/2651008cd98233e6b4b850667bef3705/runtime-1.0.0/AndroidManifest.xml:25:9-27:47
+	android:value
+		ADDED from [android.arch.lifecycle:runtime:1.0.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/2651008cd98233e6b4b850667bef3705/runtime-1.0.0/AndroidManifest.xml:27:13-44
+	android:name
+		ADDED from [android.arch.lifecycle:runtime:1.0.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/2651008cd98233e6b4b850667bef3705/runtime-1.0.0/AndroidManifest.xml:26:13-58

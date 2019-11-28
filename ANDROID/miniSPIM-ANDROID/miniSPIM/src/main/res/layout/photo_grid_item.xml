@@ -1,0 +1,27 @@
+<!-- Copyright 2014 Sony Corporation -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:background="#000000" >
+
+    <ImageView
+        android:id="@+id/photo_grid_image"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerInParent="true"
+        android:padding="2dp"
+        android:scaleType="center" />
+
+    <TextView
+        android:id="@+id/text_movie_mark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/photo_grid_image"
+        android:layout_alignRight="@id/photo_grid_image"
+        android:background="#FFFFFF"
+        android:textColor="#000000"
+        android:visibility="gone" />
+
+</RelativeLayout>

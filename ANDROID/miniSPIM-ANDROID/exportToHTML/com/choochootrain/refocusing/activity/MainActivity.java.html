@@ -1,0 +1,114 @@
+<html>
+<head>
+<title>MainActivity.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.ln { color: rgb(0,0,0); font-weight: normal; font-style: normal; }
+.s0 { color: rgb(0,0,128); font-weight: bold; }
+.s1 { }
+.s2 { color: rgb(0,128,0); font-weight: bold; }
+.s3 { color: rgb(128,128,128); font-style: italic; }
+</style>
+</head>
+<BODY BGCOLOR="#ffffff">
+<TABLE CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#C0C0C0" >
+<TR><TD><CENTER>
+<FONT FACE="Arial, Helvetica" COLOR="#000000">
+MainActivity.java</FONT>
+</center></TD></TR></TABLE>
+<pre>
+
+<a name="l1"><span class="ln">1    </span></a><span class="s0">package </span><span class="s1">com.choochootrain.refocusing.activity; 
+<a name="l2"><span class="ln">2    </span></a> 
+<a name="l3"><span class="ln">3    </span></a></span><span class="s0">import </span><span class="s1">android.content.Intent; 
+<a name="l4"><span class="ln">4    </span></a></span><span class="s0">import </span><span class="s1">android.content.pm.ActivityInfo; 
+<a name="l5"><span class="ln">5    </span></a></span><span class="s0">import </span><span class="s1">android.content.res.Configuration; 
+<a name="l6"><span class="ln">6    </span></a></span><span class="s0">import </span><span class="s1">android.os.Bundle; 
+<a name="l7"><span class="ln">7    </span></a></span><span class="s0">import </span><span class="s1">android.view.View; 
+<a name="l8"><span class="ln">8    </span></a></span><span class="s0">import </span><span class="s1">android.widget.Button; 
+<a name="l9"><span class="ln">9    </span></a> 
+<a name="l10"><span class="ln">10   </span></a></span><span class="s0">import </span><span class="s1">com.choochootrain.refocusing.R; 
+<a name="l11"><span class="ln">11   </span></a></span><span class="s0">import <a href="../../../../com/choochootrain/refocusing/datasets/Dataset.java.html">com.choochootrain.holoscope.datasets.Dataset</a></span><span class="s1">;
+<a name="l12"><span class="ln">12   </span></a></span><span class="s0">import <a href="../../../../com/choochootrain/refocusing/tasks/ComputeDPCTask.java.html">com.choochootrain.holoscope.tasks.ComputeDPCTask</a></span><span class="s1">;
+<a name="l13"><span class="ln">13   </span></a></span><span class="s0">import <a href="../../../../com/choochootrain/refocusing/tasks/ComputeDarkfieldTask.java.html">com.choochootrain.holoscope.tasks.ComputeDarkfieldTask</a></span><span class="s1">;
+<a name="l14"><span class="ln">14   </span></a></span><span class="s0">import <a href="../../../../com/choochootrain/refocusing/tasks/ComputeRefocusTask.java.html">com.choochootrain.holoscope.tasks.ComputeRefocusTask</a></span><span class="s1">;
+<a name="l15"><span class="ln">15   </span></a> 
+<a name="l16"><span class="ln">16   </span></a></span><span class="s0">public class </span><span class="s1">MainActivity </span><span class="s0">extends <a href="OpenCVActivity.java.html">OpenCVActivity</a> </span><span class="s1">{ 
+<a name="l17"><span class="ln">17   </span></a>    </span><span class="s0">private static final </span><span class="s1">String TAG = </span><span class="s2">&quot;MainActivity&quot;</span><span class="s1">; 
+<a name="l18"><span class="ln">18   </span></a> 
+<a name="l19"><span class="ln">19   </span></a>    </span><span class="s0">private </span><span class="s1">Button computeRefocus; 
+<a name="l20"><span class="ln">20   </span></a>    </span><span class="s0">private </span><span class="s1">Button viewRefocus; 
+<a name="l21"><span class="ln">21   </span></a>    </span><span class="s0">private </span><span class="s1">Button computeDPC; 
+<a name="l22"><span class="ln">22   </span></a>    </span><span class="s0">private </span><span class="s1">Button viewDPC; 
+<a name="l23"><span class="ln">23   </span></a>    </span><span class="s0">private </span><span class="s1">Button computeDarkfield; 
+<a name="l24"><span class="ln">24   </span></a>    </span><span class="s0">private </span><span class="s1">Button viewDarkfield; 
+<a name="l25"><span class="ln">25   </span></a> 
+<a name="l26"><span class="ln">26   </span></a>    @Override 
+<a name="l27"><span class="ln">27   </span></a>    </span><span class="s0">protected void </span><span class="s1">onCreate(Bundle savedInstanceState) { 
+<a name="l28"><span class="ln">28   </span></a>        </span><span class="s0">super</span><span class="s1">.onCreate(savedInstanceState); 
+<a name="l29"><span class="ln">29   </span></a>        setContentView(R.layout.activity_main); 
+<a name="l30"><span class="ln">30   </span></a> 
+<a name="l31"><span class="ln">31   </span></a>        computeRefocus = (Button) findViewById(R.id.computeRefocus); 
+<a name="l32"><span class="ln">32   </span></a>        computeRefocus.setOnClickListener(</span><span class="s0">new </span><span class="s1">View.OnClickListener() { 
+<a name="l33"><span class="ln">33   </span></a>            @Override 
+<a name="l34"><span class="ln">34   </span></a>            </span><span class="s0">public void </span><span class="s1">onClick(View v) { 
+<a name="l35"><span class="ln">35   </span></a>                </span><span class="s0">new <a href="../../../../com/choochootrain/refocusing/tasks/ComputeRefocusTask.java.html">ComputeRefocusTask</a></span><span class="s1">(MainActivity.</span><span class="s0">this</span><span class="s1">).execute(-<a href="../../../../com/choochootrain/refocusing/datasets/Dataset.java.html">Dataset</a>.MAX_DEPTH, <a href="../../../../com/choochootrain/refocusing/datasets/Dataset.java.html">Dataset</a>.DEPTH_INC, <a href="../../../../com/choochootrain/refocusing/datasets/Dataset.java.html">Dataset</a>.MAX_DEPTH); 
+<a name="l36"><span class="ln">36   </span></a>            } 
+<a name="l37"><span class="ln">37   </span></a>        }); 
+<a name="l38"><span class="ln">38   </span></a>        viewRefocus = (Button) findViewById(R.id.viewRefocus); 
+<a name="l39"><span class="ln">39   </span></a>        viewRefocus.setOnClickListener(</span><span class="s0">new </span><span class="s1">View.OnClickListener() { 
+<a name="l40"><span class="ln">40   </span></a>            @Override 
+<a name="l41"><span class="ln">41   </span></a>            </span><span class="s0">public void </span><span class="s1">onClick(View v) { 
+<a name="l42"><span class="ln">42   </span></a>                MainActivity.</span><span class="s0">this</span><span class="s1">.startViewActivity(</span><span class="s2">&quot;refocus&quot;</span><span class="s1">, </span><span class="s0">true</span><span class="s1">); 
+<a name="l43"><span class="ln">43   </span></a>            } 
+<a name="l44"><span class="ln">44   </span></a>        }); 
+<a name="l45"><span class="ln">45   </span></a> 
+<a name="l46"><span class="ln">46   </span></a>        computeDPC = (Button) findViewById(R.id.computeDPC); 
+<a name="l47"><span class="ln">47   </span></a>        computeDPC.setOnClickListener(</span><span class="s0">new </span><span class="s1">View.OnClickListener() { 
+<a name="l48"><span class="ln">48   </span></a>            @Override 
+<a name="l49"><span class="ln">49   </span></a>            </span><span class="s0">public void </span><span class="s1">onClick(View v) { 
+<a name="l50"><span class="ln">50   </span></a>                </span><span class="s0">new <a href="../../../../com/choochootrain/refocusing/tasks/ComputeDPCTask.java.html">ComputeDPCTask</a></span><span class="s1">(MainActivity.</span><span class="s0">this</span><span class="s1">).execute(-<a href="../../../../com/choochootrain/refocusing/datasets/Dataset.java.html">Dataset</a>.MAX_DEPTH, <a href="../../../../com/choochootrain/refocusing/datasets/Dataset.java.html">Dataset</a>.DEPTH_INC, <a href="../../../../com/choochootrain/refocusing/datasets/Dataset.java.html">Dataset</a>.MAX_DEPTH); 
+<a name="l51"><span class="ln">51   </span></a>            } 
+<a name="l52"><span class="ln">52   </span></a>        }); 
+<a name="l53"><span class="ln">53   </span></a>        viewDPC = (Button) findViewById(R.id.viewDPC); 
+<a name="l54"><span class="ln">54   </span></a>        viewDPC.setOnClickListener(</span><span class="s0">new </span><span class="s1">View.OnClickListener() { 
+<a name="l55"><span class="ln">55   </span></a>            @Override 
+<a name="l56"><span class="ln">56   </span></a>            </span><span class="s0">public void </span><span class="s1">onClick(View v) { 
+<a name="l57"><span class="ln">57   </span></a>                MainActivity.</span><span class="s0">this</span><span class="s1">.startViewActivity(</span><span class="s2">&quot;dpc&quot;</span><span class="s1">, </span><span class="s0">true</span><span class="s1">); 
+<a name="l58"><span class="ln">58   </span></a>            } 
+<a name="l59"><span class="ln">59   </span></a>        }); 
+<a name="l60"><span class="ln">60   </span></a> 
+<a name="l61"><span class="ln">61   </span></a>        computeDarkfield = (Button) findViewById(R.id.computeDarkfield); 
+<a name="l62"><span class="ln">62   </span></a>        computeDarkfield.setOnClickListener(</span><span class="s0">new </span><span class="s1">View.OnClickListener() { 
+<a name="l63"><span class="ln">63   </span></a>            @Override 
+<a name="l64"><span class="ln">64   </span></a>            </span><span class="s0">public void </span><span class="s1">onClick(View v) { 
+<a name="l65"><span class="ln">65   </span></a>                </span><span class="s0">new <a href="../../../../com/choochootrain/refocusing/tasks/ComputeDarkfieldTask.java.html">ComputeDarkfieldTask</a></span><span class="s1">(MainActivity.</span><span class="s0">this</span><span class="s1">).execute(); 
+<a name="l66"><span class="ln">66   </span></a>            } 
+<a name="l67"><span class="ln">67   </span></a>        }); 
+<a name="l68"><span class="ln">68   </span></a>        viewDarkfield = (Button) findViewById(R.id.viewDarkfield); 
+<a name="l69"><span class="ln">69   </span></a>        viewDarkfield.setOnClickListener(</span><span class="s0">new </span><span class="s1">View.OnClickListener() { 
+<a name="l70"><span class="ln">70   </span></a>            @Override 
+<a name="l71"><span class="ln">71   </span></a>            </span><span class="s0">public void </span><span class="s1">onClick(View v) { 
+<a name="l72"><span class="ln">72   </span></a>                MainActivity.</span><span class="s0">this</span><span class="s1">.startViewActivity(</span><span class="s2">&quot;darkfield&quot;</span><span class="s1">, </span><span class="s0">false</span><span class="s1">); 
+<a name="l73"><span class="ln">73   </span></a>            } 
+<a name="l74"><span class="ln">74   </span></a>        }); 
+<a name="l75"><span class="ln">75   </span></a>    } 
+<a name="l76"><span class="ln">76   </span></a> 
+<a name="l77"><span class="ln">77   </span></a>    </span><span class="s3">//ensure app is in portrait orientation</span><span class="s1"> 
+<a name="l78"><span class="ln">78   </span></a>    @Override 
+<a name="l79"><span class="ln">79   </span></a>    </span><span class="s0">public void </span><span class="s1">onConfigurationChanged(Configuration newConfig) { 
+<a name="l80"><span class="ln">80   </span></a>        </span><span class="s0">super</span><span class="s1">.onConfigurationChanged(newConfig); 
+<a name="l81"><span class="ln">81   </span></a>        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT); 
+<a name="l82"><span class="ln">82   </span></a>    } 
+<a name="l83"><span class="ln">83   </span></a> 
+<a name="l84"><span class="ln">84   </span></a>    </span><span class="s3">//fire intent to start activity with proper configuration for type</span><span class="s1"> 
+<a name="l85"><span class="ln">85   </span></a>    </span><span class="s0">protected void </span><span class="s1">startViewActivity(String type, </span><span class="s0">boolean </span><span class="s1">useSlider) { 
+<a name="l86"><span class="ln">86   </span></a>        Intent intent = </span><span class="s0">new </span><span class="s1">Intent(</span><span class="s0">this</span><span class="s1">, <a href="ZoomableImageActivity.java.html">ZoomableImageActivity</a>.</span><span class="s0">class</span><span class="s1">); 
+<a name="l87"><span class="ln">87   </span></a>        intent.putExtra(</span><span class="s2">&quot;type&quot;</span><span class="s1">, type); 
+<a name="l88"><span class="ln">88   </span></a>        intent.putExtra(</span><span class="s2">&quot;useSlider&quot;</span><span class="s1">, useSlider); 
+<a name="l89"><span class="ln">89   </span></a>        startActivity(intent); 
+<a name="l90"><span class="ln">90   </span></a>    } 
+<a name="l91"><span class="ln">91   </span></a>} 
+<a name="l92"><span class="ln">92   </span></a></span></pre>
+</body>
+</html>

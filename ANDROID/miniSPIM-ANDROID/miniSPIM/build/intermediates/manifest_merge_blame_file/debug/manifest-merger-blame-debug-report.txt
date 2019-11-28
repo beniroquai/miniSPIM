@@ -1,0 +1,171 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="de.minispim" >
+4
+5    <uses-sdk
+6        android:minSdkVersion="21"
+6-->/Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml
+7        android:targetSdkVersion="26" />
+7-->/Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml
+8
+9    <!-- A camera with RAW capability is required to use this application -->
+10    <uses-feature android:name="android.hardware.camera" />
+10-->/Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:6:5-60
+10-->/Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:6:19-57
+11    <uses-feature android:name="android.hardware.camera.raw" />
+11-->/Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:7:5-64
+11-->/Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:7:19-61
+12
+13    <!-- Min/target SDK versions (<uses-sdk>) managed by build.gradle -->
+14    <uses-permission android:name="android.permission.CAMERA" />
+14-->/Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:11:5-64
+14-->/Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:11:22-62
+15    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+15-->/Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:12:5-70
+15-->/Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:12:22-68
+16    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+16-->/Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:13:5-80
+16-->/Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:13:22-78
+17    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+17-->/Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:14:5-80
+17-->/Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:14:22-77
+18    <uses-permission android:name="android.permission.INTERNET" />
+18-->/Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:15:5-66
+18-->/Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:15:22-64
+19    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+19-->/Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:16:5-76
+19-->/Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:16:22-73
+20    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+20-->/Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:17:5-78
+20-->/Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:17:22-76
+21    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+21-->/Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:18:5-75
+21-->/Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:18:22-73
+22    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+22-->/Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:19:5-79
+22-->/Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:19:22-76
+23    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+23-->/Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:20:5-81
+23-->/Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:20:22-78
+24    <!-- used on huawei p9/10 and for new devices? -->
+25    <uses-permission android:name="android.permission.HW_CAMCFG_SERVICE" />
+25-->/Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:22:5-76
+25-->/Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:22:22-73
+26    <uses-permission android:name="com.huawei.camera.permission.PRIVATE" />
+26-->/Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:23:5-76
+26-->/Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:23:22-73
+27    <uses-permission android:name="huawei.android.permission.HW_SIGNATURE_OR_SYSTEM" />
+27-->/Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:24:5-88
+27-->/Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:24:22-85
+28    <!-- used on huawei p9/10 and for new devices? -->
+29    <uses-permission android:name="android.permission.WAKE_LOCK" />
+29-->/Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:26:5-67
+29-->/Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:26:22-65
+30    <!-- uses-feature android:name="android.hardware.camera" android:required="true"/ -->
+31    <!-- uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/ -->
+32    <!-- uses-feature android:name="android.hardware.sensor.compass" android:required="false"/ -->
+33    <uses-permission android:name="android.permission.WAKE_LOCK" />
+33-->/Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:26:5-67
+33-->/Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:26:22-65
+34    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+34-->/Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:17:5-78
+34-->/Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:17:22-76
+35    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+35-->/Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:32:5-75
+35-->/Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:32:22-72
+36
+37    <uses-feature
+37-->/Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:34:5-78
+38        android:glEsVersion="0x00020000"
+38-->/Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:34:19-51
+39        android:required="true" />
+39-->/Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:34:52-75
+40
+41    <application
+41-->/Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:36:5-71:19
+42        android:allowBackup="true"
+42-->/Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:37:9-35
+43        android:debuggable="true"
+44        android:icon="@drawable/microscope_icon"
+44-->/Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:38:9-49
+45        android:label="@string/app_name"
+45-->/Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:39:9-41
+46        android:supportsRtl="true"
+46-->/Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:41:9-35
+47        android:testOnly="true"
+48        android:theme="@android:style/Theme.Holo.Light" >
+48-->/Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:40:9-56
+49        <service android:name="org.eclipse.paho.android.service.MqttService" />
+49-->/Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:42:9-80
+49-->/Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:42:18-77
+50
+51        <activity
+51-->/Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:43:9-51:20
+52            android:name="de.minispim.activity.SplashActivity"
+52-->/Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:44:13-63
+53            android:label="@string/app_name"
+53-->/Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:45:13-45
+54            android:screenOrientation="portrait" >
+54-->/Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:46:13-49
+55            <intent-filter>
+55-->/Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:47:13-50:29
+56                <action android:name="android.intent.action.MAIN" />
+56-->/Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:48:17-69
+56-->/Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:48:25-66
+57
+58                <category android:name="android.intent.category.LAUNCHER" />
+58-->/Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:49:17-77
+58-->/Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:49:27-74
+59            </intent-filter>
+60        </activity>
+61        <activity
+61-->/Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:52:9-55:20
+62            android:name="de.minispim.activity.MainActivity"
+62-->/Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:53:13-61
+63            android:screenOrientation="portrait" >
+63-->/Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:54:13-49
+64        </activity>
+65        <activity
+65-->/Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:56:9-59:20
+66            android:name="de.minispim.activity.ZoomableImageActivity"
+66-->/Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:57:13-70
+67            android:screenOrientation="portrait" >
+67-->/Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:58:13-49
+68        </activity>
+69        <activity
+69-->/Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:60:9-64:20
+70            android:name="de.minispim.acquisition.AcquireResultActivity"
+70-->/Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:61:13-73
+71            android:largeHeap="true"
+71-->/Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:62:13-37
+72            android:screenOrientation="portrait" >
+72-->/Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:63:13-49
+73        </activity>
+74        <activity
+74-->/Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:65:9-69:20
+75            android:name="de.minispim.acquisition.AcquireActivity"
+75-->/Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:66:13-67
+76            android:largeHeap="true"
+76-->/Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:67:13-37
+77            android:screenOrientation="portrait" >
+77-->/Users/bene/Dropbox/Dokumente/Promotion/PROJECTS/miniSPIM/ANDROID/miniSPIM-ANDROID/miniSPIM/src/main/AndroidManifest.xml:68:13-49
+78        </activity>
+79        <!--
+80 ATTENTION: This was auto-generated to add Google Play services to your project for
+81     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
+82        -->
+83        <meta-data
+83-->[com.android.support:support-v13:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/baa46286eba7cc6c8a706f0ddaa15535/support-v13-26.1.0/AndroidManifest.xml:26:9-28:38
+84            android:name="android.support.VERSION"
+84-->[com.android.support:support-v13:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/baa46286eba7cc6c8a706f0ddaa15535/support-v13-26.1.0/AndroidManifest.xml:27:13-51
+85            android:value="26.1.0" />
+85-->[com.android.support:support-v13:26.1.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/baa46286eba7cc6c8a706f0ddaa15535/support-v13-26.1.0/AndroidManifest.xml:28:13-35
+86        <meta-data
+86-->[android.arch.lifecycle:runtime:1.0.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/2651008cd98233e6b4b850667bef3705/runtime-1.0.0/AndroidManifest.xml:25:9-27:47
+87            android:name="android.arch.lifecycle.VERSION"
+87-->[android.arch.lifecycle:runtime:1.0.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/2651008cd98233e6b4b850667bef3705/runtime-1.0.0/AndroidManifest.xml:26:13-58
+88            android:value="27.0.0-SNAPSHOT" />
+88-->[android.arch.lifecycle:runtime:1.0.0] /Users/bene/.gradle/caches/transforms-2/files-2.1/2651008cd98233e6b4b850667bef3705/runtime-1.0.0/AndroidManifest.xml:27:13-44
+89    </application>
+90
+91</manifest>

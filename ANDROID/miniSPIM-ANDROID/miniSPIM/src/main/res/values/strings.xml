@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">miniSPIM</string>
+
+    <string name="refocus">Refocus</string>
+    <string name="darkfield">Darkfield</string>
+    <string name="phase_contrast">Differential Phase Contrast</string>
+    <string name="select">Select USB Web Camera</string>
+    <string name="camera">Camera</string>
+    <string name="refresh">Refresh</string>
+    <string name="no_device">No USB camera found</string>
+    <string name="init_Button">Initiate</string>
+
+    <string name="sample_camera">Camera Remote API Sample</string>
+    <string name="msg_wifi_disconnect">(Wi-Fi disconnected)</string>
+    <string name="button_take_picture">Take Picture</string>
+    <string name="button_rec_start">Start movie\nrecording</string>
+    <string name="button_rec_stop">Stop movie\nrecording</string>
+    <string name="button_start_search">Start device discovery</string>
+    <string name="button_contents_list">Contents List</string>
+    <string name="msg_search_devices">Connect to compatible camera via Wi-Fi settings before device discovery.</string>
+    <string name="msg_device_search_finish">Device discovery successfully completed.</string>
+    <string name="msg_error_device_searching">Failed to search.\nStopped.</string>
+    <string name="msg_error_api_calling">Cannot control the device by API.</string>
+    <string name="msg_rec_start">Recording started.</string>
+    <string name="msg_rec_stop">Recording stopped.</string>
+    <string name="msg_error_take_picture">Failed to take a picture.</string>
+    <string name="msg_error_connection">Failed to connect to the device.</string>
+    <string name="msg_error_non_supported_device">Unsupported device in this sample app.</string>
+    <string name="msg_error_content">Contents not available.</string>
+    <string name="no_image">No image</string>
+    <string name="prompt_shoot_mode">Select shoot mode</string>
+    <string name="msg_error_no_supported_shootmode">Unsupported shoot mode in this sample app.</string>
+    <string name="title_activity_date_list">Date List</string>
+    <string name="title_activity_contents_grid">Contents</string>
+    <string name="title_activity_still_content">Still</string>
+    <string name="title_activity_movie_content">Movie</string>
+        <string name="picture">Picture</string>
+        <string name="description_info">Info</string>
+        <string name="request_permission">This sample needs camera, and file read and write permissions.</string>
+        <string name="camera_error">This device doesn\'t support Camera2 API.</string>
+    <string name="intro_message">
+        <![CDATA[
+            This sample demonstrates the basic use of Camera2 API.
+            Code is taken from https://github.com/googlesamples/android-Camera2Basic
+        ]]>
+    </string>
+
+</resources>

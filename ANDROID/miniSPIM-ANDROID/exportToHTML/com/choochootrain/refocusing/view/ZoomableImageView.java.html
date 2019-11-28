@@ -1,0 +1,148 @@
+<html>
+<head>
+<title>ZoomableImageView.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.ln { color: rgb(0,0,0); font-weight: normal; font-style: normal; }
+.s0 { color: rgb(0,0,128); font-weight: bold; }
+.s1 { }
+.s2 { color: rgb(0,0,255); }
+.s3 { color: rgb(128,128,128); font-style: italic; }
+</style>
+</head>
+<BODY BGCOLOR="#ffffff">
+<TABLE CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#C0C0C0" >
+<TR><TD><CENTER>
+<FONT FACE="Arial, Helvetica" COLOR="#000000">
+ZoomableImageView.java</FONT>
+</center></TD></TR></TABLE>
+<pre>
+
+<a name="l1"><span class="ln">1    </span></a><span class="s0">package </span><span class="s1">com.choochootrain.refocusing.view; 
+<a name="l2"><span class="ln">2    </span></a> 
+<a name="l3"><span class="ln">3    </span></a></span><span class="s0">import </span><span class="s1">android.content.Context; 
+<a name="l4"><span class="ln">4    </span></a></span><span class="s0">import </span><span class="s1">android.graphics.Bitmap; 
+<a name="l5"><span class="ln">5    </span></a></span><span class="s0">import </span><span class="s1">android.graphics.Canvas; 
+<a name="l6"><span class="ln">6    </span></a></span><span class="s0">import </span><span class="s1">android.graphics.drawable.BitmapDrawable; 
+<a name="l7"><span class="ln">7    </span></a></span><span class="s0">import </span><span class="s1">android.graphics.drawable.Drawable; 
+<a name="l8"><span class="ln">8    </span></a></span><span class="s0">import </span><span class="s1">android.util.AttributeSet; 
+<a name="l9"><span class="ln">9    </span></a></span><span class="s0">import </span><span class="s1">android.view.MotionEvent; 
+<a name="l10"><span class="ln">10   </span></a></span><span class="s0">import </span><span class="s1">android.view.ScaleGestureDetector; 
+<a name="l11"><span class="ln">11   </span></a></span><span class="s0">import </span><span class="s1">android.view.View; 
+<a name="l12"><span class="ln">12   </span></a> 
+<a name="l13"><span class="ln">13   </span></a></span><span class="s0">public class </span><span class="s1">ZoomableImageView </span><span class="s0">extends </span><span class="s1">View { 
+<a name="l14"><span class="ln">14   </span></a>    </span><span class="s0">private static final int </span><span class="s1">INVALID_POINTER_ID = -</span><span class="s2">1</span><span class="s1">; 
+<a name="l15"><span class="ln">15   </span></a>    </span><span class="s0">private static final float </span><span class="s1">MIN_SCALE = </span><span class="s2">0.05f</span><span class="s1">; 
+<a name="l16"><span class="ln">16   </span></a>    </span><span class="s0">private static final float </span><span class="s1">MAX_SCALE = </span><span class="s2">20.0f</span><span class="s1">; 
+<a name="l17"><span class="ln">17   </span></a> 
+<a name="l18"><span class="ln">18   </span></a>    </span><span class="s0">private </span><span class="s1">Drawable image; 
+<a name="l19"><span class="ln">19   </span></a>    </span><span class="s0">private float </span><span class="s1">xPos; 
+<a name="l20"><span class="ln">20   </span></a>    </span><span class="s0">private float </span><span class="s1">yPos; 
+<a name="l21"><span class="ln">21   </span></a>    </span><span class="s0">private float </span><span class="s1">lastXPos; 
+<a name="l22"><span class="ln">22   </span></a>    </span><span class="s0">private float </span><span class="s1">lastYPos; 
+<a name="l23"><span class="ln">23   </span></a>    </span><span class="s0">private int </span><span class="s1">activePointerId = INVALID_POINTER_ID; 
+<a name="l24"><span class="ln">24   </span></a> 
+<a name="l25"><span class="ln">25   </span></a>    </span><span class="s0">private </span><span class="s1">ScaleGestureDetector scaleDetector; 
+<a name="l26"><span class="ln">26   </span></a>    </span><span class="s0">private float </span><span class="s1">scaleFactor = </span><span class="s2">1.f</span><span class="s1">; 
+<a name="l27"><span class="ln">27   </span></a> 
+<a name="l28"><span class="ln">28   </span></a>    </span><span class="s0">public </span><span class="s1">ZoomableImageView(Context context) { 
+<a name="l29"><span class="ln">29   </span></a>        </span><span class="s0">this</span><span class="s1">(context, </span><span class="s0">null</span><span class="s1">, </span><span class="s2">0</span><span class="s1">); 
+<a name="l30"><span class="ln">30   </span></a>    } 
+<a name="l31"><span class="ln">31   </span></a> 
+<a name="l32"><span class="ln">32   </span></a>    </span><span class="s0">public </span><span class="s1">ZoomableImageView(Context context, AttributeSet attrs) { 
+<a name="l33"><span class="ln">33   </span></a>        </span><span class="s0">this</span><span class="s1">(context, attrs, </span><span class="s2">0</span><span class="s1">); 
+<a name="l34"><span class="ln">34   </span></a>    } 
+<a name="l35"><span class="ln">35   </span></a> 
+<a name="l36"><span class="ln">36   </span></a>    </span><span class="s0">public </span><span class="s1">ZoomableImageView(Context context, AttributeSet attrs, </span><span class="s0">int </span><span class="s1">defStyle) { 
+<a name="l37"><span class="ln">37   </span></a>        </span><span class="s0">super</span><span class="s1">(context, attrs, defStyle); 
+<a name="l38"><span class="ln">38   </span></a>        scaleDetector = </span><span class="s0">new </span><span class="s1">ScaleGestureDetector(context, </span><span class="s0">new </span><span class="s1">ScaleListener()); 
+<a name="l39"><span class="ln">39   </span></a>    } 
+<a name="l40"><span class="ln">40   </span></a> 
+<a name="l41"><span class="ln">41   </span></a>    </span><span class="s0">public void </span><span class="s1">setImage(Bitmap bmp) { 
+<a name="l42"><span class="ln">42   </span></a>        image = </span><span class="s0">new </span><span class="s1">BitmapDrawable(getContext().getResources(), bmp); 
+<a name="l43"><span class="ln">43   </span></a>        image.setBounds(</span><span class="s2">0</span><span class="s1">, </span><span class="s2">0</span><span class="s1">, image.getIntrinsicWidth(), image.getIntrinsicHeight()); 
+<a name="l44"><span class="ln">44   </span></a> 
+<a name="l45"><span class="ln">45   </span></a>        invalidate(); 
+<a name="l46"><span class="ln">46   </span></a>    } 
+<a name="l47"><span class="ln">47   </span></a> 
+<a name="l48"><span class="ln">48   </span></a>    @Override 
+<a name="l49"><span class="ln">49   </span></a>    </span><span class="s0">public boolean </span><span class="s1">onTouchEvent(MotionEvent ev) { 
+<a name="l50"><span class="ln">50   </span></a>        </span><span class="s3">// pass all events through ScaleGestureDetector</span><span class="s1"> 
+<a name="l51"><span class="ln">51   </span></a>        scaleDetector.onTouchEvent(ev); 
+<a name="l52"><span class="ln">52   </span></a> 
+<a name="l53"><span class="ln">53   </span></a>        </span><span class="s0">final int </span><span class="s1">action = ev.getAction(); 
+<a name="l54"><span class="ln">54   </span></a> 
+<a name="l55"><span class="ln">55   </span></a>        </span><span class="s0">switch </span><span class="s1">(action &amp; MotionEvent.ACTION_MASK) { 
+<a name="l56"><span class="ln">56   </span></a>            </span><span class="s0">case </span><span class="s1">MotionEvent.ACTION_DOWN: 
+<a name="l57"><span class="ln">57   </span></a>                lastXPos = ev.getX(); 
+<a name="l58"><span class="ln">58   </span></a>                lastYPos = ev.getY(); 
+<a name="l59"><span class="ln">59   </span></a>                activePointerId = ev.getPointerId(</span><span class="s2">0</span><span class="s1">); 
+<a name="l60"><span class="ln">60   </span></a>                </span><span class="s0">break</span><span class="s1">; 
+<a name="l61"><span class="ln">61   </span></a>            </span><span class="s0">case </span><span class="s1">MotionEvent.ACTION_MOVE: 
+<a name="l62"><span class="ln">62   </span></a>                </span><span class="s0">final int </span><span class="s1">pointerIndex = ev.findPointerIndex(activePointerId); 
+<a name="l63"><span class="ln">63   </span></a>                </span><span class="s0">float </span><span class="s1">x = ev.getX(pointerIndex); 
+<a name="l64"><span class="ln">64   </span></a>                </span><span class="s0">float </span><span class="s1">y = ev.getY(pointerIndex); 
+<a name="l65"><span class="ln">65   </span></a> 
+<a name="l66"><span class="ln">66   </span></a>                </span><span class="s0">if </span><span class="s1">(!scaleDetector.isInProgress()) { 
+<a name="l67"><span class="ln">67   </span></a>                    xPos += x - lastXPos; 
+<a name="l68"><span class="ln">68   </span></a>                    yPos += y - lastYPos; 
+<a name="l69"><span class="ln">69   </span></a> 
+<a name="l70"><span class="ln">70   </span></a>                    invalidate(); 
+<a name="l71"><span class="ln">71   </span></a>                } 
+<a name="l72"><span class="ln">72   </span></a> 
+<a name="l73"><span class="ln">73   </span></a>                lastXPos = x; 
+<a name="l74"><span class="ln">74   </span></a>                lastYPos = y; 
+<a name="l75"><span class="ln">75   </span></a> 
+<a name="l76"><span class="ln">76   </span></a>                </span><span class="s0">break</span><span class="s1">; 
+<a name="l77"><span class="ln">77   </span></a>            </span><span class="s0">case </span><span class="s1">MotionEvent.ACTION_POINTER_UP: 
+<a name="l78"><span class="ln">78   </span></a>                </span><span class="s0">final int </span><span class="s1">idx = (ev.getAction() &amp; MotionEvent.ACTION_POINTER_INDEX_MASK) 
+<a name="l79"><span class="ln">79   </span></a>                        &gt;&gt; MotionEvent.ACTION_POINTER_INDEX_SHIFT; 
+<a name="l80"><span class="ln">80   </span></a>                </span><span class="s0">int </span><span class="s1">pointerId = ev.getPointerId(idx); 
+<a name="l81"><span class="ln">81   </span></a>                </span><span class="s0">if </span><span class="s1">(pointerId == activePointerId) { 
+<a name="l82"><span class="ln">82   </span></a>                    </span><span class="s3">// This was our active pointer going up. Choose a new</span><span class="s1"> 
+<a name="l83"><span class="ln">83   </span></a>                    </span><span class="s3">// active pointer and adjust accordingly.</span><span class="s1"> 
+<a name="l84"><span class="ln">84   </span></a>                    </span><span class="s0">final int </span><span class="s1">newPointerIndex = idx == </span><span class="s2">0 </span><span class="s1">? </span><span class="s2">1 </span><span class="s1">: </span><span class="s2">0</span><span class="s1">; 
+<a name="l85"><span class="ln">85   </span></a>                    lastXPos = ev.getX(newPointerIndex); 
+<a name="l86"><span class="ln">86   </span></a>                    lastYPos = ev.getY(newPointerIndex); 
+<a name="l87"><span class="ln">87   </span></a>                    activePointerId = ev.getPointerId(newPointerIndex); 
+<a name="l88"><span class="ln">88   </span></a>                } 
+<a name="l89"><span class="ln">89   </span></a>                </span><span class="s0">break</span><span class="s1">; 
+<a name="l90"><span class="ln">90   </span></a>            </span><span class="s0">case </span><span class="s1">MotionEvent.ACTION_UP: 
+<a name="l91"><span class="ln">91   </span></a>                activePointerId = INVALID_POINTER_ID; 
+<a name="l92"><span class="ln">92   </span></a>                </span><span class="s0">break</span><span class="s1">; 
+<a name="l93"><span class="ln">93   </span></a>            </span><span class="s0">case </span><span class="s1">MotionEvent.ACTION_CANCEL: 
+<a name="l94"><span class="ln">94   </span></a>                activePointerId = INVALID_POINTER_ID; 
+<a name="l95"><span class="ln">95   </span></a>                </span><span class="s0">break</span><span class="s1">; 
+<a name="l96"><span class="ln">96   </span></a>        } 
+<a name="l97"><span class="ln">97   </span></a> 
+<a name="l98"><span class="ln">98   </span></a>        </span><span class="s0">return true</span><span class="s1">; 
+<a name="l99"><span class="ln">99   </span></a>    } 
+<a name="l100"><span class="ln">100  </span></a> 
+<a name="l101"><span class="ln">101  </span></a>    @Override 
+<a name="l102"><span class="ln">102  </span></a>    </span><span class="s0">public void </span><span class="s1">onDraw(Canvas canvas) { 
+<a name="l103"><span class="ln">103  </span></a>        </span><span class="s0">super</span><span class="s1">.onDraw(canvas); 
+<a name="l104"><span class="ln">104  </span></a> 
+<a name="l105"><span class="ln">105  </span></a>        </span><span class="s0">if </span><span class="s1">(image != </span><span class="s0">null</span><span class="s1">) { 
+<a name="l106"><span class="ln">106  </span></a>            canvas.save(); 
+<a name="l107"><span class="ln">107  </span></a>            canvas.translate(xPos, yPos); 
+<a name="l108"><span class="ln">108  </span></a>            canvas.scale(scaleFactor, scaleFactor); 
+<a name="l109"><span class="ln">109  </span></a>            canvas.translate(-image.getIntrinsicWidth()/</span><span class="s2">2</span><span class="s1">, -image.getIntrinsicHeight()/</span><span class="s2">2</span><span class="s1">); 
+<a name="l110"><span class="ln">110  </span></a>            image.draw(canvas); 
+<a name="l111"><span class="ln">111  </span></a>            canvas.restore(); 
+<a name="l112"><span class="ln">112  </span></a>        } 
+<a name="l113"><span class="ln">113  </span></a>    } 
+<a name="l114"><span class="ln">114  </span></a> 
+<a name="l115"><span class="ln">115  </span></a>    </span><span class="s0">private class </span><span class="s1">ScaleListener </span><span class="s0">extends </span><span class="s1">ScaleGestureDetector.SimpleOnScaleGestureListener { 
+<a name="l116"><span class="ln">116  </span></a>        @Override 
+<a name="l117"><span class="ln">117  </span></a>        </span><span class="s0">public boolean </span><span class="s1">onScale(ScaleGestureDetector detector) { 
+<a name="l118"><span class="ln">118  </span></a>            scaleFactor *= detector.getScaleFactor(); 
+<a name="l119"><span class="ln">119  </span></a>            scaleFactor = Math.max(MIN_SCALE, Math.min(scaleFactor, MAX_SCALE)); 
+<a name="l120"><span class="ln">120  </span></a> 
+<a name="l121"><span class="ln">121  </span></a>            invalidate(); 
+<a name="l122"><span class="ln">122  </span></a>            </span><span class="s0">return true</span><span class="s1">; 
+<a name="l123"><span class="ln">123  </span></a>        } 
+<a name="l124"><span class="ln">124  </span></a>    } 
+<a name="l125"><span class="ln">125  </span></a>} 
+<a name="l126"><span class="ln">126  </span></a></span></pre>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<html>
+<head>
+<title>ImageProgressTask.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.ln { color: rgb(0,0,0); font-weight: normal; font-style: normal; }
+.s0 { color: rgb(0,0,128); font-weight: bold; }
+.s1 { }
+.s2 { color: rgb(0,0,255); }
+</style>
+</head>
+<BODY BGCOLOR="#ffffff">
+<TABLE CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#C0C0C0" >
+<TR><TD><CENTER>
+<FONT FACE="Arial, Helvetica" COLOR="#000000">
+ImageProgressTask.java</FONT>
+</center></TD></TR></TABLE>
+<pre>
+
+<a name="l1"><span class="ln">1    </span></a><span class="s0">package </span><span class="s1">com.choochootrain.refocusing.tasks; 
+<a name="l2"><span class="ln">2    </span></a> 
+<a name="l3"><span class="ln">3    </span></a></span><span class="s0">import </span><span class="s1">android.app.ProgressDialog; 
+<a name="l4"><span class="ln">4    </span></a></span><span class="s0">import </span><span class="s1">android.content.Context; 
+<a name="l5"><span class="ln">5    </span></a></span><span class="s0">import </span><span class="s1">android.os.AsyncTask; 
+<a name="l6"><span class="ln">6    </span></a> 
+<a name="l7"><span class="ln">7    </span></a></span><span class="s0">public abstract class </span><span class="s1">ImageProgressTask </span><span class="s0">extends </span><span class="s1">AsyncTask&lt;Float, Integer, Void&gt; { 
+<a name="l8"><span class="ln">8    </span></a>    </span><span class="s0">protected </span><span class="s1">Context context; 
+<a name="l9"><span class="ln">9    </span></a>    </span><span class="s0">protected </span><span class="s1">ProgressDialog progressDialog; 
+<a name="l10"><span class="ln">10   </span></a> 
+<a name="l11"><span class="ln">11   </span></a>    </span><span class="s0">public </span><span class="s1">ImageProgressTask(Context context) { 
+<a name="l12"><span class="ln">12   </span></a>        </span><span class="s0">this</span><span class="s1">.context = context; 
+<a name="l13"><span class="ln">13   </span></a>        </span><span class="s0">this</span><span class="s1">.progressDialog = </span><span class="s0">new </span><span class="s1">ProgressDialog(context); 
+<a name="l14"><span class="ln">14   </span></a>        </span><span class="s0">this</span><span class="s1">.progressDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL); 
+<a name="l15"><span class="ln">15   </span></a>    } 
+<a name="l16"><span class="ln">16   </span></a> 
+<a name="l17"><span class="ln">17   </span></a>    @Override 
+<a name="l18"><span class="ln">18   </span></a>    </span><span class="s0">protected void </span><span class="s1">onProgressUpdate(Integer... progress){ 
+<a name="l19"><span class="ln">19   </span></a>        </span><span class="s0">if </span><span class="s1">(progress.length &gt; </span><span class="s2">1</span><span class="s1">) { 
+<a name="l20"><span class="ln">20   </span></a>            </span><span class="s0">if </span><span class="s1">(progress[</span><span class="s2">0</span><span class="s1">] &gt;= </span><span class="s2">0</span><span class="s1">) 
+<a name="l21"><span class="ln">21   </span></a>                progressDialog.setProgress(progress[</span><span class="s2">0</span><span class="s1">]); 
+<a name="l22"><span class="ln">22   </span></a>            </span><span class="s0">if </span><span class="s1">(progress[</span><span class="s2">1</span><span class="s1">] &gt;= </span><span class="s2">0</span><span class="s1">) 
+<a name="l23"><span class="ln">23   </span></a>                progressDialog.setSecondaryProgress(progress[</span><span class="s2">1</span><span class="s1">]); 
+<a name="l24"><span class="ln">24   </span></a>        } 
+<a name="l25"><span class="ln">25   </span></a>    } 
+<a name="l26"><span class="ln">26   </span></a> 
+<a name="l27"><span class="ln">27   </span></a>    @Override 
+<a name="l28"><span class="ln">28   </span></a>    </span><span class="s0">protected void </span><span class="s1">onPreExecute() { 
+<a name="l29"><span class="ln">29   </span></a>        progressDialog.show(); 
+<a name="l30"><span class="ln">30   </span></a>    } 
+<a name="l31"><span class="ln">31   </span></a> 
+<a name="l32"><span class="ln">32   </span></a>    @Override 
+<a name="l33"><span class="ln">33   </span></a>    </span><span class="s0">protected void </span><span class="s1">onPostExecute(Void result) { 
+<a name="l34"><span class="ln">34   </span></a>        </span><span class="s0">if </span><span class="s1">(progressDialog.isShowing()) 
+<a name="l35"><span class="ln">35   </span></a>            progressDialog.dismiss(); 
+<a name="l36"><span class="ln">36   </span></a>    } 
+<a name="l37"><span class="ln">37   </span></a>}</span></pre>
+</body>
+</html>
