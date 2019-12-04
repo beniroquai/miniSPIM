@@ -187,11 +187,6 @@ public class AcquireActivity extends Activity implements FragmentCompat.OnReques
 
     private ProgressBar acquireProgressBar;
 
-    // switch if optimized illumination source has been calculated already
-    boolean g_illumination_processed = false;
-
-
-
     // *****************************************************************************************
     //  MQTT - STUFF
     //**********************************************************************************************
@@ -417,6 +412,7 @@ public class AcquireActivity extends Activity implements FragmentCompat.OnReques
         
 
         seekBarLSwidth = (SeekBar) findViewById(R.id.seekBarLSwidth);
+        seekBarLSwidth.setMin(0);
         seekBarLSwidth.setMax(100);
         seekBarLSwidth.setProgress(val_LS_width_global);
 
@@ -486,16 +482,16 @@ public class AcquireActivity extends Activity implements FragmentCompat.OnReques
                 openSettingsDialog();
             }
         });
-         /*
+
         btnCapture.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                new runCapture().execute();
+                new runLSsnap().execute();
             }
 
 
         });
 
-*/
+
 
         btnStartLSMeasurement.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -688,6 +684,7 @@ public class AcquireActivity extends Activity implements FragmentCompat.OnReques
     1. Change Illuminatino NA using slider
      */
     public void slideToLightsheet(int ls_pos_z, int ls_thickness) {
+        if (ls_thickness == 0)  ls_thickness = 1920;
         mBitmap = CreatePatterns.getLightsheet(ls_pos_z,ls_thickness);
         showNextColor();
     }
@@ -935,12 +932,6 @@ public class AcquireActivity extends Activity implements FragmentCompat.OnReques
     private static final int MAX_PREVIEW_HEIGHT = 1080;
 
 
-    /**
-     * ZOOM PARAMETER FOR CROPPING
-     */
-    Rect CURRENT_ZOOM;
-    int crop_height = 1080;
-    int crop_width = 1920;
 
     /**
      * Camera state: Device is closed.
@@ -1704,38 +1695,6 @@ public class AcquireActivity extends Activity implements FragmentCompat.OnReques
         setIso("800");
 
 
-        int cropW = 1000;
-        int cropH = cropW;
-        float maxzoom = 0;
-        Rect m;
-
-        Log.i(TAG, "Enter ZOOM");
-        try {
-            //Activity activity = getActivity();
-            CameraManager manager = (CameraManager) this.getSystemService(Context.CAMERA_SERVICE);
-            CameraCharacteristics characteristics = manager.getCameraCharacteristics(mCameraId);
-            Log.i(TAG, "Enter ZOOM 2");
-            maxzoom = (characteristics.get(CameraCharacteristics.SCALER_AVAILABLE_MAX_DIGITAL_ZOOM)) * 10;
-            m = characteristics.get(CameraCharacteristics.SENSOR_INFO_ACTIVE_ARRAY_SIZE);
-            Log.i(TAG, String.valueOf(maxzoom) + "Enter ZOOM 0");
-
-        } catch (CameraAccessException e) {
-            throw new RuntimeException("can not access camera.", e);
-        }
-
-        Log.i(TAG, "Enter ZOOM 3");
-        CURRENT_ZOOM = new Rect(cropW, cropH, m.width() - cropW, m.height() - cropH);
-        crop_height = CURRENT_ZOOM.height();
-        crop_width = CURRENT_ZOOM.width();
-        builder.set(CaptureRequest.SCALER_CROP_REGION, CURRENT_ZOOM);
-        /*
-        try {
-            mCaptureSession.setRepeatingRequest(mPreviewRequestBuilder.build(), mCaptureCallback, null);
-        } catch (CameraAccessException e) {
-            e.printStackTrace();
-        } catch (NullPointerException ex) {
-            ex.printStackTrace();
-        }*/
     }
 
     /**
@@ -1943,7 +1902,7 @@ public class AcquireActivity extends Activity implements FragmentCompat.OnReques
             captureBuilder.setTag(mRequestCounter.getAndIncrement());
 
             CaptureRequest request = captureBuilder.build();
-            captureBuilder.set(CaptureRequest.SCALER_CROP_REGION, CURRENT_ZOOM);
+            //captureBuilder.set(CaptureRequest.SCALER_CROP_REGION, CURRENT_ZOOM);
 
 
             // Create an ImageSaverBuilder in which to collect results, and add it to the queue
@@ -2897,6 +2856,80 @@ public class AcquireActivity extends Activity implements FragmentCompat.OnReques
             takePicture();
         }
     }
+
+
+
+    private class runLSsnap extends AsyncTask<Void, Void, Void> {
+
+        String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmssSSS", Locale.US).format(new Date());
+        String mypath = mypath_measurements+ timestamp + "/";
+        File myDir = new File(mypath);
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+
+            if (!myDir.exists()) {
+                if (!myDir.mkdirs()) {
+                    return; //Cannot make directory
+                }
+            }
+
+            btnCapture.setEnabled(false);
+            acquireTextView.setText("Light-Sheet Measurement in Progress (SNAP!)");
+            acquireProgressBar.setVisibility(View.VISIBLE); // Make invisible at first, then have it pop up
+            acquireProgressBar.setMax(1);
+
+            mSleep(20);
+        }
+
+        @Override
+        protected void onProgressUpdate(Void... params) {
+
+        }
+
+
+        void mSleep(int sleepVal) {
+            try {
+                Thread.sleep(sleepVal);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+
+        @Override
+        protected Void doInBackground(Void... params) {
+
+            Log.i("CAM2", "do in Background started");
+            // initialize file names for this LED
+                myfullpath_measurements = mypath;
+                fullfilename_measurements = "SNAP_1.DNG";
+                cameraReady = false;
+
+                // capture image and pause
+                captureImage();
+                mSleep(1000);
+
+
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Void result) {
+            super.onPostExecute(result);
+            acquireProgressBar.setVisibility(View.INVISIBLE); // Make invisible at first, then have it pop up
+            btnCapture.setEnabled(true);
+
+            // free memory
+            System.gc();
+        }
+
+
+        public void captureImage() {
+            takePicture();
+        }
+    }
+
 
 
 

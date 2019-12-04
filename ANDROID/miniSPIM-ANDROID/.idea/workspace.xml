@@ -6,111 +6,17 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_LOG_LEVEL" value="error" />
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="zoom" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="No Filters" />
     <option name="TOOL_WINDOW_REGEXP_FILTER" value="false" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4f9de21b-4a84-48c3-91c0-f4c25546d6bc" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars____Users_bene_Dropbox_Dokumente_Promotion_PROJECTS_miniSPIM_ANDROID_miniSPIM_ANDROID_miniSPIM_libs_org_eclipse_paho_android_service_1_1_1_jar_unspecified_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars____Users_bene_Dropbox_Dokumente_Promotion_PROJECTS_miniSPIM_ANDROID_miniSPIM_ANDROID_miniSPIM_libs_org_eclipse_paho_client_mqttv3_1_1_1_jar_unspecified_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars____Users_bene_Dropbox_Dokumente_Promotion_PROJECTS_miniSPIM_ANDROID_miniSPIM_ANDROID_miniSPIM_src_main_libs_org_eclipse_paho_android_service_1_1_1_jar_unspecified_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars____Users_bene_Dropbox_Dokumente_Promotion_PROJECTS_miniSPIM_ANDROID_miniSPIM_ANDROID_miniSPIM_src_main_libs_org_eclipse_paho_client_mqttv3_1_1_1_jar_unspecified_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_android_25.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_android_26.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_android_27.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_android_28.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_core_common_1_0_0_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_core_common_1_1_1_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_core_runtime_1_1_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_common_1_0_0_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_common_1_1_1_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_livedata_1_1_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_livedata_core_1_1_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_runtime_1_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_runtime_1_1_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_viewmodel_1_1_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_animated_vector_drawable_26_1_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_animated_vector_drawable_28_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_appcompat_v7_26_1_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_appcompat_v7_28_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_asynclayoutinflater_28_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_cardview_v7_26_1_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_cardview_v7_28_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_collections_28_0_0_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_constraint_constraint_layout_1_1_3_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_constraint_constraint_layout_solver_1_1_3_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_coordinatorlayout_28_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_cursoradapter_28_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_customview_28_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_design_26_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_design_26_1_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_design_27_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_design_28_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_documentfile_28_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_drawerlayout_28_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_interpolator_28_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_loader_28_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_localbroadcastmanager_28_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_multidex_1_0_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_print_28_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_recyclerview_v7_26_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_recyclerview_v7_26_1_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_recyclerview_v7_27_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_recyclerview_v7_28_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_slidingpanelayout_28_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_annotations_26_1_0_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_annotations_27_1_1_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_annotations_28_0_0_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_compat_26_1_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_compat_28_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_core_ui_26_1_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_core_ui_28_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_core_utils_26_1_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_core_utils_28_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_fragment_26_1_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_fragment_28_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_media_compat_26_1_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_media_compat_27_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_media_compat_28_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_v13_26_1_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_v13_28_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_v4_26_1_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_v4_27_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_v4_28_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_vector_drawable_26_1_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_vector_drawable_28_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_swiperefreshlayout_28_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_core_3_0_2_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_idling_resource_3_0_2_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_monitor_1_0_2_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_runner_1_0_2_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_transition_26_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_transition_26_1_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_transition_27_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_transition_28_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_versionedparcelable_28_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_viewpager_28_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_code_findbugs_jsr305_2_0_1_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_javawriter_2_1_1_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__javax_inject_javax_inject_1_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__junit_junit_4_12_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__net_sf_kxml_kxml2_2_3_0_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_integration_1_3_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_library_1_3_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/miniSPIM-ANDROID.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/miniSPIM/src/main/java/de/minispim/acquisition/AcquireActivity.java.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/miniSPIM/src/main/java/de/minispim/acquisition/AcquireResultActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/miniSPIM/src/main/java/de/minispim/acquisition/CameraCharacteristicsEx.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/miniSPIM/src/main/java/de/minispim/acquisition/CaptureRequestEx.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/miniSPIM/src/main/java/de/minispim/acquisition/CaptureResultEx.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/miniSPIM/src/main/java/de/minispim/acquisition/MqttUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/miniSPIM/src/main/java/de/minispim/acquisition/ReflectionHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/miniSPIM/src/main/libs/org.eclipse.paho.android.service-1.1.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/miniSPIM/src/main/libs/org.eclipse.paho.client.mqttv3-1.1.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/miniSPIM/src/main/res/layout/activity_crop.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../INVENTOR/Assembly_miniSPIM_v1.iam" beforeDir="false" afterPath="$PROJECT_DIR$/../../INVENTOR/Assembly_miniSPIM_v1.iam" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../INVENTOR/OldVersions/Assembly_miniSPIM_v1.0026.iam" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../INVENTOR/lockfile.lck" beforeDir="false" />
     </list>
     <ignored path="Beamerscope.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -148,15 +54,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/miniSPIM/src/main/java/de/minispim/acquisition/AcquireActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="87">
-              <caret line="2865" column="54" selection-start-line="2865" selection-start-column="54" selection-end-line="2865" selection-end-column="54" />
+            <state relative-caret-position="267">
+              <caret line="2923" column="24" selection-start-line="2923" selection-start-column="24" selection-end-line="2923" selection-end-column="24" />
               <folding>
                 <element signature="e#7775#7776#0" expanded="true" />
                 <element signature="e#7840#7841#0" expanded="true" />
-                <element signature="e#18331#18332#0" expanded="true" />
-                <element signature="e#18383#18384#0" expanded="true" />
-                <element signature="e#18720#18721#0" expanded="true" />
-                <element signature="e#18784#18785#0" expanded="true" />
+                <element signature="e#18245#18246#0" expanded="true" />
+                <element signature="e#18297#18298#0" expanded="true" />
+                <element signature="e#18428#18429#0" expanded="true" />
+                <element signature="e#18486#18487#0" expanded="true" />
+                <element signature="e#18627#18628#0" expanded="true" />
+                <element signature="e#18691#18692#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -191,12 +99,12 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/miniSPIM/src/main/res/layout/activity_acquire.xml">
-          <provider selected="true" editor-type-id="text-editor">
+          <provider editor-type-id="text-editor">
             <state relative-caret-position="140">
               <caret line="325" column="58" selection-start-line="325" selection-start-column="37" selection-end-line="325" selection-end-column="58" />
             </state>
           </provider>
-          <provider editor-type-id="android-designer2" />
+          <provider selected="true" editor-type-id="android-designer2" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -220,17 +128,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>updatePresentation</find>
-      <find>mTextureView</find>
-      <find>mPresentation</find>
-      <find>textViewLSposz</find>
-      <find>process</find>
-      <find>capture</find>
-      <find>background&quot;</find>
-      <find>backgroun</find>
-      <find>g_Capture_path</find>
-      <find>slideToLightsheet</find>
-      <find>drawRect</find>
       <find>1080</find>
       <find>setISO</find>
       <find>MainActivity</find>
@@ -250,6 +147,17 @@
       <find>runLSmeasurement</find>
       <find>btnsave</find>
       <find>btnStartLSMeasurement</find>
+      <find>prev</find>
+      <find>zoom</find>
+      <find>100</find>
+      <find>1920</find>
+      <find>slideToLightsheet</find>
+      <find>saveFile</find>
+      <find>process</find>
+      <find>async</find>
+      <find>asynct</find>
+      <find>btnCapture</find>
+      <find>runLSsnap</find>
     </findStrings>
     <replaceStrings>
       <replace>global_na+30</replace>
@@ -342,6 +250,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -403,9 +314,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -762,7 +670,7 @@
       <window_info id="Resources Explorer" order="9" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4854151" weight="0.32866243" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32866243" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32866243" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Application Servers" order="4" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
@@ -777,7 +685,7 @@
       <window_info anchor="bottom" id="Android Profiler" order="14" sideWeight="0.5676889" weight="0.3298292" />
       <window_info anchor="bottom" id="Logcat" order="15" sideWeight="0.8593867" weight="0.38853502" />
       <window_info anchor="bottom" id="DevEco Output" order="16" />
-      <window_info active="true" anchor="bottom" id="Build" order="17" visible="true" weight="0.3299363" />
+      <window_info anchor="bottom" id="Build" order="17" weight="0.3299363" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -816,115 +724,115 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/miniSPIM/src/main/java/de/minispim/acquisition/AcquireActivity.java</url>
-          <line>232</line>
+          <line>227</line>
           <properties />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/miniSPIM/src/main/java/de/minispim/acquisition/AcquireActivity.java</url>
-          <line>361</line>
+          <line>356</line>
           <properties />
           <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/miniSPIM/src/main/java/de/minispim/acquisition/AcquireActivity.java</url>
-          <line>350</line>
+          <line>345</line>
           <properties />
           <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/miniSPIM/src/main/java/de/minispim/acquisition/AcquireActivity.java</url>
-          <line>387</line>
+          <line>382</line>
           <properties />
           <option name="timeStamp" value="32" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/miniSPIM/src/main/java/de/minispim/acquisition/AcquireActivity.java</url>
-          <line>445</line>
+          <line>441</line>
           <properties />
           <option name="timeStamp" value="34" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/miniSPIM/src/main/java/de/minispim/acquisition/AcquireActivity.java</url>
-          <line>490</line>
+          <line>486</line>
           <properties />
           <option name="timeStamp" value="35" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/miniSPIM/src/main/java/de/minispim/acquisition/AcquireActivity.java</url>
-          <line>491</line>
+          <line>487</line>
           <properties />
           <option name="timeStamp" value="36" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/miniSPIM/src/main/java/de/minispim/acquisition/AcquireActivity.java</url>
-          <line>728</line>
+          <line>725</line>
           <properties />
           <option name="timeStamp" value="37" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/miniSPIM/src/main/java/de/minispim/acquisition/AcquireActivity.java</url>
-          <line>726</line>
+          <line>723</line>
           <properties />
           <option name="timeStamp" value="39" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/miniSPIM/src/main/java/de/minispim/acquisition/AcquireActivity.java</url>
-          <line>835</line>
+          <line>832</line>
           <properties />
           <option name="timeStamp" value="42" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/miniSPIM/src/main/java/de/minispim/acquisition/AcquireActivity.java</url>
-          <line>839</line>
+          <line>836</line>
           <properties />
           <option name="timeStamp" value="43" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/miniSPIM/src/main/java/de/minispim/acquisition/AcquireActivity.java</url>
-          <line>851</line>
+          <line>848</line>
           <properties />
           <option name="timeStamp" value="44" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/miniSPIM/src/main/java/de/minispim/acquisition/AcquireActivity.java</url>
-          <line>852</line>
+          <line>849</line>
           <properties />
           <option name="timeStamp" value="45" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/miniSPIM/src/main/java/de/minispim/acquisition/AcquireActivity.java</url>
-          <line>874</line>
+          <line>871</line>
           <properties />
           <option name="timeStamp" value="46" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/miniSPIM/src/main/java/de/minispim/acquisition/AcquireActivity.java</url>
-          <line>883</line>
+          <line>880</line>
           <properties />
           <option name="timeStamp" value="47" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/miniSPIM/src/main/java/de/minispim/acquisition/AcquireActivity.java</url>
-          <line>884</line>
+          <line>881</line>
           <properties />
           <option name="timeStamp" value="48" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/miniSPIM/src/main/java/de/minispim/acquisition/AcquireActivity.java</url>
-          <line>885</line>
+          <line>882</line>
           <properties />
           <option name="timeStamp" value="49" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/miniSPIM/src/main/java/de/minispim/acquisition/AcquireActivity.java</url>
-          <line>889</line>
+          <line>886</line>
           <properties />
           <option name="timeStamp" value="50" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/miniSPIM/src/main/java/de/minispim/acquisition/AcquireActivity.java</url>
-          <line>725</line>
+          <line>722</line>
           <properties class="de.minispim.acquisition.AcquireActivity" />
           <option name="timeStamp" value="38" />
         </line-breakpoint>
@@ -1097,6 +1005,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/miniSPIM/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="41" column="79" selection-start-line="41" selection-start-column="79" selection-end-line="41" selection-end-column="79" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-manifest" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/miniSPIM/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1095">
+          <caret line="73" column="28" selection-start-line="73" selection-start-column="28" selection-end-line="73" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/miniSPIM/src/main/java/de/minispim/utils/CreatePatterns.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3450">
@@ -1114,25 +1037,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/miniSPIM/src/main/res/layout/activity_acquire_settings.xml">
-      <provider editor-type-id="text-editor" />
-      <provider selected="true" editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/miniSPIM/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="41" column="79" selection-start-line="41" selection-start-column="79" selection-end-line="41" selection-end-column="79" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-manifest" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/miniSPIM/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1095">
-          <caret line="73" column="28" selection-start-line="73" selection-start-column="28" selection-end-line="73" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/miniSPIM/src/main/java/de/minispim/datasets/Dataset.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -1140,25 +1044,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/miniSPIM/src/main/res/layout/activity_acquire_settings.xml">
+      <provider editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="android-designer2" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/miniSPIM/src/main/res/layout/activity_acquire.xml">
-      <provider selected="true" editor-type-id="text-editor">
+      <provider editor-type-id="text-editor">
         <state relative-caret-position="140">
           <caret line="325" column="58" selection-start-line="325" selection-start-column="37" selection-end-line="325" selection-end-column="58" />
         </state>
       </provider>
-      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/miniSPIM/src/main/java/de/minispim/acquisition/AcquireActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="2865" column="54" selection-start-line="2865" selection-start-column="54" selection-end-line="2865" selection-end-column="54" />
+        <state relative-caret-position="267">
+          <caret line="2923" column="24" selection-start-line="2923" selection-start-column="24" selection-end-line="2923" selection-end-column="24" />
           <folding>
             <element signature="e#7775#7776#0" expanded="true" />
             <element signature="e#7840#7841#0" expanded="true" />
-            <element signature="e#18331#18332#0" expanded="true" />
-            <element signature="e#18383#18384#0" expanded="true" />
-            <element signature="e#18720#18721#0" expanded="true" />
-            <element signature="e#18784#18785#0" expanded="true" />
+            <element signature="e#18245#18246#0" expanded="true" />
+            <element signature="e#18297#18298#0" expanded="true" />
+            <element signature="e#18428#18429#0" expanded="true" />
+            <element signature="e#18486#18487#0" expanded="true" />
+            <element signature="e#18627#18628#0" expanded="true" />
+            <element signature="e#18691#18692#0" expanded="true" />
           </folding>
         </state>
       </provider>
